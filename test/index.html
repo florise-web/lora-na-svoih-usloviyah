@@ -4,190 +4,340 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Что мешает вам жить в отношениях на своих условиях?</title>
-<meta name="description" content="Тест от психолога и сексолога Лоры. 7 вопросов, 2 минуты.">
+<meta name="description" content="Тест от психолога и сексолога Лоры. 2 минуты.">
 <meta property="og:title" content="Что мешает вам жить в отношениях на своих условиях?">
-<meta property="og:description" content="7 вопросов, 2 минуты. Тест от Лоры.">
+<meta property="og:description" content="16 утверждений, 2 минуты. Тест от психолога и сексолога Лоры.">
 <meta name="theme-color" content="#6E1631">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600;700&display=swap">
 <style>
-:root{--ground:#F4F0F1;--ink:#1C1619;--wine:#6E1631;--rose:#EBD3D8;--muted:#5E5258;--paper:#FFFFFF;--on-wine:#FFF4F6}
-*{box-sizing:border-box}
-html,body{margin:0;height:100%}
-body{background:var(--ground);color:var(--ink);font-family:'Golos Text',system-ui,sans-serif;-webkit-font-smoothing:antialiased;display:flex;justify-content:center}
-.app{width:100%;max-width:440px;min-height:100%;padding:calc(36px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(28px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px));display:flex;flex-direction:column}
-.screen{display:flex;flex-direction:column;gap:20px;flex:1}
-.screen[hidden]{display:none}
-.eyebrow{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--wine)}
-h1{margin:0;font-family:'Unbounded','Golos Text',sans-serif;font-weight:700;font-size:28px;line-height:1.14;text-wrap:balance}
-h2{margin:0;font-family:'Unbounded','Golos Text',sans-serif;font-weight:500;font-size:22px;line-height:1.25;text-wrap:balance}
-p{margin:0;font-size:17px;line-height:1.5}
-.muted{color:var(--muted)}
-.photo{flex:1;min-height:200px;border-radius:24px;background:var(--rose);display:flex;align-items:flex-end;padding:18px;font-size:15px;font-weight:600;color:var(--wine)}
-.btn{display:block;width:100%;padding:18px;border:0;border-radius:14px;background:var(--wine);color:var(--on-wine);font:inherit;font-size:18px;font-weight:600;text-align:center;text-decoration:none;cursor:pointer}
-.btn:hover{background:#5A1128;color:var(--on-wine)}
-.top{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted)}
-.link{border:0;background:none;padding:6px 0;font:inherit;font-size:14px;color:var(--wine);cursor:pointer}
-.bar{height:6px;border-radius:999px;background:#E2D6DA;overflow:hidden}
-.bar span{display:block;height:100%;background:var(--wine);border-radius:999px;transition:width .25s ease}
-.options{display:flex;flex-direction:column;gap:10px}
-.opt{text-align:left;padding:16px 18px;border:1.5px solid var(--ink);border-radius:14px;background:var(--paper);color:var(--ink);font:inherit;font-size:16px;line-height:1.4;cursor:pointer}
-.opt:hover{background:var(--rose)}
-.card{padding:16px 18px;border-radius:16px;background:var(--paper);display:flex;flex-direction:column;gap:6px}
-.card b{font-size:14px;color:var(--wine)}
-.cta{padding:18px;border-radius:18px;background:var(--wine);color:var(--on-wine);display:flex;flex-direction:column;gap:12px}
-.cta a{display:block;text-align:center;padding:14px;border-radius:12px;background:var(--on-wine);color:var(--wine);text-decoration:none;font-weight:600}
-.small{font-size:14px;line-height:1.45;color:var(--muted)}
-.spacer{flex:1}
+:root{--bg:#F4F0F1;--card:#FFFFFF;--wine:#6E1631;--wine2:#8A2445;--deep:#4A0E21;--rose:#EBD3D8;--tint:#F7E9EC;--ink:#1C1619;--muted:#5E5258;--line:#E2D6DA;--on:#FFF4F6}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:'Golos Text',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:16.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;padding:calc(18px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(48px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));min-height:100vh;display:flex;flex-direction:column}
+h1,h2,h3{font-family:'Unbounded','Golos Text',sans-serif;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h3{font-size:19px;line-height:1.3;margin-top:42px;font-weight:700}
+h4{font:700 17px/1.35 'Golos Text',sans-serif;margin:16px 0 0}
+p{margin:13px 0 0}
+.who{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.av{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:var(--wine);color:var(--on);font:700 16px 'Unbounded',sans-serif;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.av img{width:100%;height:100%;object-fit:cover;display:block}
+.who b{font-weight:600;font-size:15.5px}
+.hero{border-radius:22px;padding:22px 20px 26px;color:var(--on);background:var(--wine);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-70px;bottom:-110px;width:260px;height:260px;border-radius:50%;border:38px solid rgba(255,244,246,.08);pointer-events:none}
+.hero>*{position:relative}
+.badge{display:inline-block;background:var(--rose);color:var(--deep);font:600 13px 'Golos Text',sans-serif;border-radius:20px;padding:6px 13px;margin-bottom:14px}
+.hero h1{color:var(--on);font-size:26px;line-height:1.2;font-weight:700}
+.hero h1.res{font-size:24px}
+.hero p{color:#F0D9DF;margin-top:12px;font-size:16.5px;line-height:1.5}
+.checks{list-style:none;margin:20px 0 0;padding:0}
+.checks li{display:flex;gap:12px;align-items:flex-start;margin-top:12px;line-height:1.4}
+.ck{flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:var(--wine);position:relative;margin-top:1px}
+.ck:after{content:"";position:absolute;left:7px;top:4px;width:5px;height:10px;border:solid var(--on);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.ck.soft{background:var(--rose)}
+.ck.soft:after{border-color:var(--wine)}
+.say{display:flex;gap:10px;align-items:flex-start;margin-top:22px}
+.bub{background:var(--card);border-radius:4px 18px 18px 18px;padding:13px 16px;font-size:16px;line-height:1.5}
+.bub b{display:block;font-size:13.5px;color:var(--wine);margin-bottom:3px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.chips span{background:var(--tint);color:var(--wine);font:600 13.5px 'Golos Text',sans-serif;border-radius:20px;padding:6px 12px}
+.btn{display:block;width:100%;margin-top:24px;padding:17px;border:0;border-radius:14px;background:var(--wine);color:var(--on);font:600 17px 'Golos Text',sans-serif;text-align:center;text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--deep);color:var(--on)}
+.btn.ghost{background:transparent;color:var(--wine);border:1.5px solid var(--wine)}
+.btn.ghost:hover{background:var(--tint);color:var(--wine)}
+.legal{font-size:13px;line-height:1.45;color:var(--muted);margin-top:12px;text-align:center}
+.legal a,.foot a{color:var(--muted)}
+.foot{margin-top:36px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;line-height:1.5;color:var(--muted)}
+.foot p{margin:8px 0 0}
+.bar{height:6px;border-radius:999px;background:var(--line);overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--wine);border-radius:999px;transition:width .25s ease}
+.count{font-size:14px;color:var(--muted);margin-top:12px}
+.note{font-size:14px;font-weight:600;color:var(--wine);margin-top:22px}
+.stmt{font:500 21px/1.35 'Golos Text',sans-serif;margin:16px 0 18px;min-height:112px}
+.opt{display:block;width:100%;text-align:left;margin-top:10px;padding:16px 18px;border:1.5px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);font:500 16.5px 'Golos Text',sans-serif;cursor:pointer}
+.opt:hover{border-color:var(--wine)}
+.opt.on{border-color:var(--wine);background:var(--wine);color:var(--on)}
+.re{min-height:48px;margin-top:14px;font-size:15.5px;line-height:1.45;color:var(--wine);font-weight:500}
+.back{margin-top:6px;border:0;background:none;padding:8px 0;font:500 15px 'Golos Text',sans-serif;color:var(--muted);cursor:pointer;align-self:flex-start}
+.lead{margin-top:18px;padding:16px 18px;border-radius:16px;background:var(--rose);font-weight:500;line-height:1.5}
+.sit{margin-top:14px;padding:16px 18px;border-radius:16px;background:var(--card);display:flex;flex-direction:column;gap:4px}
+.sit b{color:var(--wine)}
+.sc{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px;padding:12px 14px;border-radius:12px;background:var(--card)}
+.sc.me{outline:2px solid var(--wine)}
+.sc .n{font-weight:600;font-size:15.5px}
+.sc .l{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.seg{display:flex;gap:4px}
+.seg i{width:18px;height:8px;border-radius:4px;background:var(--line)}
+.seg i.f{background:var(--wine)}
+.sc .w{font-size:13.5px;color:var(--muted);width:74px;text-align:right}
+.pw{display:flex;gap:12px;align-items:flex-start;margin-top:12px;line-height:1.4}
+.said{margin-top:14px;padding:16px 18px;border-radius:16px;background:var(--card)}
+.said .hd{font-size:14px;color:var(--muted)}
+.said .it{display:flex;gap:10px;align-items:flex-start;margin-top:10px;line-height:1.4}
+.loop{margin-top:14px;display:flex;flex-direction:column;align-items:stretch}
+.lp{padding:12px 16px;border-radius:14px;background:var(--card)}
+.lp span{display:block;font-size:12.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.lp b{font-weight:500}
+.ar{text-align:center;color:var(--wine);font-size:18px;line-height:1.3;padding:3px 0}
+.phr{margin-top:14px;padding:16px 18px;border-radius:16px;background:var(--wine);color:var(--on);display:flex;flex-direction:column;gap:6px}
+.phr b{font-weight:600}
+.phr span{color:#F0D9DF}
+.tool{display:flex;gap:12px;align-items:flex-start;margin-top:12px;padding:14px 16px;border-radius:14px;background:var(--card);line-height:1.45}
+.tg{flex:0 0 auto;background:var(--tint);color:var(--wine);font:600 13px 'Golos Text',sans-serif;border-radius:20px;padding:4px 10px;margin-top:1px}
+.sub{font-weight:600;color:var(--wine);margin-top:8px}
+.stp{display:flex;gap:12px;align-items:flex-start;margin-top:14px}
+.no{flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:var(--wine);color:var(--on);font:700 14px 'Unbounded',sans-serif;display:flex;align-items:center;justify-content:center}
+.bd{display:flex;flex-direction:column;gap:2px;line-height:1.45;padding-top:3px}
+.bd b{font-weight:600}
+.safety{margin-top:18px;padding:14px 16px;border-radius:14px;border:1.5px solid var(--wine);font-size:15px;line-height:1.5}
+.lines p{margin:6px 0 0}
+.ask{display:flex;justify-content:flex-end;margin-top:18px}
+.ask span{background:var(--wine);color:var(--on);border-radius:18px 18px 4px 18px;padding:10px 14px;font-weight:500;font-size:15.5px}
+.card{margin-top:10px;padding:16px;border-radius:18px;background:var(--card)}
+.card .top{display:flex;gap:12px;align-items:center}
+.ico{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:var(--rose);display:flex;align-items:center;justify-content:center;color:var(--wine);font:700 18px 'Unbounded',sans-serif}
+.ti b{display:block;font-weight:600;line-height:1.3}
+.ti i{display:block;font-style:normal;font-size:13.5px;color:var(--muted)}
+.cap{margin-top:10px;font-size:15.5px;line-height:1.45;color:var(--muted)}
+.all{margin-top:20px;font-weight:600;text-align:center}
+.small{font-size:13.5px;color:var(--muted);text-align:center;margin-top:8px}
+.total{margin-top:22px;padding:16px 18px;border-radius:16px;background:var(--tint)}
 button:focus-visible,a:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
-@media (prefers-reduced-motion:reduce){.bar span{transition:none}}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
 </style>
 </head>
 <body>
-<main class="app">
-
-<section class="screen" id="intro">
-<div class="eyebrow">Тест от Лоры</div>
-<h1>Что мешает вам жить в отношениях на своих условиях?</h1>
-<p class="muted">7 вопросов, 2 минуты. В конце поймете, какой сценарий у вас повторяется, и получите один шаг, который можно сделать уже сегодня.</p>
-<div class="photo">[Фото Лоры]</div>
-<button class="btn" id="start" type="button">Пройти тест</button>
-</section>
-
-<section class="screen" id="quiz" hidden>
-<div style="display:flex;flex-direction:column;gap:10px">
-<div class="top"><span id="progress">Вопрос 1 из 7</span><button class="link" id="back" type="button">Назад</button></div>
-<div class="bar"><span id="bar" style="width:14%"></span></div>
-</div>
-<h2 id="question"></h2>
-<div class="options" id="options"></div>
-</section>
-
-<section class="screen" id="result" hidden>
-<div class="eyebrow">Ваш результат</div>
-<h1 id="r-title"></h1>
-<p id="r-text"></p>
-<div class="card"><b>Шаг на сегодня</b><span id="r-today"></span></div>
-<p class="small" id="r-safety" hidden>Если рядом с ним вам страшно, начните с безопасности. Напишите нам, подскажем, куда обратиться.</p>
-<div class="spacer"></div>
-<div class="cta">
-<span>В закрытом канале Лора на этой неделе разбирает именно вашу ситуацию</span>
-<a id="channel" href="#" target="_blank" rel="noopener">Перейти в канал</a>
-</div>
-<button class="link" id="restart" type="button" style="align-self:center">Пройти заново</button>
-</section>
-
-</main>
+<main class="wrap" id="app"></main>
 <script>
-// Ссылка на канал прогрева: вставить сюда
-var CHANNEL_URL = '#';
+/* ================= НАСТРОЙКИ =================
+   AV: ссылка на фото Лоры (квадратное). Пусто: в кружке буква Л.
+   BOT: имя бота без @. Кнопка результата ведет в бота с меткой вида
+        res_a_odna (тип результата и ситуация). Бот ставит метку и
+        присылает ссылку в закрытый канал.
+   USE_BOT_LINK = false или BOT пустой: кнопка ведет сразу на CHANNEL.
+   DOCS: ссылки на документы. Пустая строка прячет строку с документами. */
+var AV = '';
+var NAME = 'Лора';
+var BOT = '';
+var USE_BOT_LINK = true;
+var CHANNEL = 'https://t.me/lori_talks';
+var DOCS = { policy: '', consent: '', mailing: '' };
+/* ============================================= */
 
+/* 16 утверждений, по четыре на каждый сценарий.
+   s: 0 Качели, 1 Растворение, 2 Молчание, 3 Надежда.
+   re: реплика после ответа «да» или «часто». note: строка над утверждением. */
 var Q = [
-  { q: 'Что у вас сейчас с отношениями?', o: [
-    ['Знакомлюсь, хожу на свидания', 'A'],
-    ['Отношения только начались', 'B'],
-    ['Давно в паре', 'C'],
-    ['Все сложно, но не ухожу', 'D'] ] },
-  { q: 'Он не пишет два дня. Что внутри?', o: [
-    ['Становится только интереснее, хочется добиться', 'A'],
-    ['Не могу ни на чем сосредоточиться, жду', 'B'],
-    ['Уже привыкла, он всегда так', 'C'],
-    ['Понимаю, что опять начинается, и все равно жду', 'D'] ] },
-  { q: 'Какой мужчина цепляет сильнее?', o: [
-    ['Тот, кого надо добиваться', 'A'],
-    ['Тот, с кем с первых дней как в кино', 'B'],
-    ['Уже не до «цепляет», хочется, чтобы просто слышал', 'C'],
-    ['Тот, с кем больно, но без него не могу', 'D'] ] },
-  { q: 'Вам хочется на выходных в ресторан, а он предлагает остаться дома. Что вы сделаете?', o: [
-    ['Соглашусь, чтобы не показаться требовательной', 'A'],
-    ['Отменю свои планы, главное быть с ним', 'B'],
-    ['Промолчу, все равно будет как он хочет', 'C'],
-    ['Поругаемся, а потом я извинюсь', 'D'] ] },
-  { q: 'Когда вы в последний раз говорили мужчине «нет»?', o: [
-    ['Тем, кто не интересен, легко. Тем, кто нравится, не могу', 'A'],
-    ['Не помню, с ним мне все «да»', 'B'],
-    ['Давно, проще сделать самой', 'C'],
-    ['Говорю, но потом сдаюсь', 'D'] ] },
-  { q: 'Что вы чаще чувствуете в отношениях?', o: [
-    ['Азарт, а потом пустоту', 'A'],
-    ['Тревогу, что он перестанет стараться', 'B'],
-    ['Усталость и скуку', 'C'],
-    ['Обиду и надежду одновременно', 'D'] ] },
-  { q: 'Чего бы вам хотелось через полгода?', o: [
-    ['Чтобы цеплял тот, кто выбирает меня', 'A'],
-    ['Остаться собой и не потерять его', 'B'],
-    ['Снова хотеть его и чувствовать, что меня слышат', 'C'],
-    ['Наконец решить и перестать возвращаться', 'D'] ] }
+ {s:0,t:'Спокойный мужчина, который пишет сам и вовремя, быстро начинает казаться скучным.'},
+ {s:1,t:'Когда появляется мужчина, ваши планы и подруги незаметно уходят на второй план.'},
+ {s:2,t:'В отношениях вы чаще предлагаете, напоминаете и объясняете, чем он.'},
+ {s:3,t:'Вы уже уходили от мужчины и возвращались, хотя понимали, что вам плохо.'},
+ {s:0,t:'Тот, кто отвечает через раз, не выходит у вас из головы.',re:'Дело не во вкусе. Голова привыкла принимать тревогу за любовь.'},
+ {s:1,t:'Вы заранее чувствуете, что ему не понравится, и убираете это из себя.',note:'Треть позади.',re:'Так ваше желание незаметно оказывается вторым.'},
+ {s:2,t:'О том, что вас не устраивает, вы молчите, пока не взорветесь.',re:'Несказанное копится, а потом выходит криком, и вы же извиняетесь.'},
+ {s:3,t:'Вам говорят, что у вас все не так уж плохо, и вы начинаете сомневаться в себе.'},
+ {s:0,t:'Когда мужчина пропадает на пару дней, интерес к нему только растет.'},
+ {s:1,t:'Вам трудно сказать ему «нет», даже если очень хочется.',re:'Здесь его реакция весит больше, чем ваше желание.'},
+ {s:2,t:'Желания рядом с ним все меньше, а близость похожа на обязанность.',re:'Желание часто уходит туда, где копится несказанное. Его можно вернуть.'},
+ {s:3,t:'Вы держитесь за то, как хорошо было в начале, и ждете, что он снова станет таким.',note:'Осталось пять.'},
+ {s:0,t:'Вы долго перечитываете его сообщения и ищете, что сделали не так.'},
+ {s:1,t:'Если он недоволен, это тревожит сильнее, чем собственная усталость.'},
+ {s:2,t:'Вам неловко попросить о подарке, заботе или помощи, и вы ждете, что он догадается.'},
+ {s:3,t:'Страх остаться одной решает больше, чем ваши чувства к нему.',re:'Это очень честный ответ. С этого места можно начинать.'}
 ];
-
-var R = {
-  A: { title: 'Вас цепляют те, кого надо добиваться',
-       text: 'Спокойный мужчина, который пишет «доброе утро», кажется пресным, а тот, кто отвечает раз в сутки, не выходит из головы. Дело не во вкусе. Голова привыкла считать тревогу любовью, и это можно перестроить.',
-       today: 'После следующего свидания запишите не «екнуло или нет», а как вам было рядом с ним: спокойно или тревожно.' },
-  B: { title: 'Вы растворяетесь во влюбленности',
-       text: 'Отношения только начались, а ваши планы, подруги и дела уже на паузе. Страшно, что он перестанет стараться, и вы стараетесь за двоих.',
-       today: 'Верните в эту неделю одно свое дело, которое отменили ради него, и не отменяйте его.' },
-  C: { title: 'Вы тянете отношения за двоих',
-       text: 'Вы давно вместе. Предлагаете, объясняете, напоминаете, а он молчит. Желания все меньше, и кажется, что так теперь будет всегда.',
-       today: 'Выберите одну вещь, о которой давно молчите, и скажите о ней одной фразой, без длинных объяснений.' },
-  D: { title: 'Вы все понимаете, но не уходите',
-       text: 'Вы видите, что вам плохо, уходили и возвращались. Держит надежда, что он изменится, и страх остаться одной. С вами все в порядке: одного понимания тут не хватает никому.',
-       today: 'Запишите в заметки три факта: за что вы уходили в последний раз. Не чувства, а что он сделал.',
-       safety: true }
+var SCALE = [['Да, прямо про меня',3],['Часто',2],['Редко',1],['Нет, это не про меня',0]];
+var FORK = {q:'Что у вас сейчас в отношениях?',a:[['Я одна, знакомлюсь','odna'],['Отношения только начались','nachalo'],['Давно в паре','para']]};
+var SIT = {
+ odna:['Вы одна','На свиданиях сценарий виден лучше всего: в том, кто вас цепляет, и в том, кого вы отпускаете.'],
+ nachalo:['Отношения только начались','Сейчас самое удобное время договориться о важном, пока вы еще не растворились во влюбленности.'],
+ para:['Вы давно в паре','Здесь сценарий живет в быту: в том, о чем вы молчите и кто за что отвечает.']
 };
+var R = [
+ {k:'a',row:'Качели',t:'Вас цепляют те, кого надо добиваться',
+  p:['Спокойный мужчина, который пишет «доброе утро», кажется пресным. А тот, кто отвечает раз в сутки, не выходит из головы, и вы перечитываете переписку, ища, где ошиблись.','Потом он пропадает снова, а вы снова ждете.'],
+  lead:'Дело не в «таких мужчинах». Голова привыкла принимать тревогу за влюбленность, а спокойствие за скуку. Это перестраивается.',
+  out:'Все эти ответы про одно: интерес у вас включается там, где внимание надо заслужить.',
+  say:'Спокойная любовь не обязана быть скучной. Я сама долго путала качели с чувствами, пока не встретила мужчину, который не исчезает.',
+  loop:['Он ответил через сутки','«Наверное, я что-то не так написала»','Пишу первой, стараюсь понравиться','Он снова пропадает, я снова жду'],
+  nw:'Не догоняю. Если он не проявился сам, второго шага с моей стороны нет.',
+  tools:[['Психоанализ','Ищем, откуда вам знакома любовь, которую надо заслуживать.'],['Сексология','Разбираем, почему возбуждает тот, кто исчезает, и как перенести желание на того, кто рядом.'],['Шаг недели','Одно действие на свидании, после которого вы видите мужчину по поступкам, а не по надежде.']],
+  st:{sub:'Посмотреть на него трезво',a:'Вы ловите себя на том, что ждете его сообщения и думаете только о нем.',q:'«Мне с ним спокойно или тревожно?»',qs:'Запишите ответ. Не «екнуло или нет», а что вы чувствуете рядом с ним.',h3:'Не пишите первой сегодня',c:'Просто понаблюдайте, что происходит внутри, когда вы не делаете шаг за него.',why:'Влечение к спокойному мужчине растет медленно. Сначала нужно научиться отличать интерес от тревоги.'},
+  good:'Не гонитесь за теми, кто исчезает'},
+ {k:'b',row:'Растворение',t:'Вы растворяетесь в мужчине и теряете себя',
+  p:['Когда появляется он, ваши планы, подруги и дела незаметно уходят на паузу. Вы заранее чувствуете, что ему не понравится, и убираете это из себя.','А потом замечаете, что вся жизнь крутится вокруг него.'],
+  lead:'Ваше желание никуда не делось. Просто вы замечаете его последним, после его настроения и страха конфликта.',
+  out:'Все эти ответы про одно: близость для вас превращается в необходимость угадывать чужие желания.',
+  say:'Можно быть рядом и оставаться собой. Мужчине не нужна ваша тень, ему нужны вы.',
+  loop:['Он зовет на выходные к своим друзьям','«Если откажу, он обидится»','Отменяю свои планы','Вечером злюсь на себя и молчу'],
+  nw:'«Я подумаю и скажу через час». И честно проверяю, хочу ли я.',
+  tools:[['Психоанализ','Разбираем, почему ваше «да» звучит раньше, чем вы успеваете спросить себя.'],['Границы','Ищем ваши слова для «нет» и для «давай по-другому».'],['Шаг недели','Возвращаете в жизнь одно свое дело и держите его, даже если он недоволен.']],
+  st:{sub:'Вернуть себе одно дело',a:'Вы собираетесь отменить свои планы ради него.',q:'«Чего хочу я, если не думать о том, что он скажет?»',qs:'Запишите ответ одной строкой.',h3:'Оставьте одно дело себе',c:'Встреча с подругой, танцы, вечер для себя. Не отменяйте его на этой неделе.',why:'Свою жизнь возвращают маленькими кусками. Когда у вас есть свое, уходит страх, что без него от вас ничего не останется.'},
+  good:'Остаетесь собой рядом с мужчиной'},
+ {k:'c',row:'Молчание',t:'Вы тянете отношения за двоих',
+  p:['Вы предлагаете, объясняете, напоминаете, а он молчит. О том, что не устраивает, вы молчите, пока не взорветесь, а потом извиняетесь.','Желания все меньше, и кажется, что так теперь будет всегда.'],
+  lead:'Желание уходит не от возраста и не от быта. Оно уходит туда, где копится несказанное.',
+  out:'Все эти ответы про одно: вы берете на себя всю работу в паре и ждете, что он сам догадается.',
+  say:'Мужчина относится к вам так, как вы позволяете. Сказать о своем желании вслух это первый шаг к тому, чтобы снова его хотеть.',
+  loop:['Он опять не сделал то, о чем договаривались','«Ладно, проще сделать самой»','Делаю и молчу','Обида копится, желания все меньше'],
+  nw:'Говорю одной фразой: «Мне важно вот это. Как ты это видишь?»',
+  tools:[['Психоанализ','Смотрим, почему вам легче понять его, чем признать свое недовольство.'],['Сексология','Разбираемся, куда ушло желание и как его вернуть в долгой паре.'],['Шаг недели','Один разговор, который вы давно откладываете, по готовым словам.']],
+  st:{sub:'Сказать одну вещь вслух',a:'Вы чувствуете раздражение и снова решаете промолчать.',q:'«Что я на самом деле хочу ему сказать?»',qs:'Сократите до одной фразы, без «ты всегда» и «ты никогда».',h3:'Скажите ее сегодня',c:'Спокойно, без претензии. Потом посмотрите на его реакцию, это уже ответ.',why:'Пока вы молчите, он не знает, что что-то не так. Разговор возвращает в пару двух взрослых людей.'},
+  good:'Можете сказать о своем'},
+ {k:'d',row:'Надежда',t:'Вы все понимаете, но не уходите',
+  p:['Вы видите, что вам плохо. Уходили и возвращались. Подруги говорят «у вас же все есть», и вы начинаете сомневаться, имеете ли право считать эти отношения плохими.','Держит надежда, что он снова станет таким, как в начале, и страх остаться одной.'],
+  lead:'С вами все в порядке. Одного понимания здесь не хватает никому, нужны план и опора.',
+  out:'Все эти ответы про одно: надежда и страх весят для вас больше, чем то, что происходит на самом деле.',
+  say:'Я сама много раз пыталась уйти из отношений, в которых мне было плохо. Получилось, когда я перестала ждать, что он изменится, и начала опираться на себя.',
+  loop:['Снова ссора или холод','«Он изменится, бывает же хорошо»','Остаюсь и стараюсь сильнее','Через месяц все повторяется'],
+  nw:'Записываю факты: что он сделал, а не что пообещал.',
+  tools:[['Психоанализ','Разбираем, что именно держит: привязанность, страх, вложенные годы.'],['План опоры','По шагам: эмоционально, по деньгам, по быту.'],['Личная работа','Выход из тяжелых отношений лучше вести лично, со мной или другим специалистом.']],
+  st:{sub:'Отделить факты от надежды',a:'Вы снова думаете «бывает же хорошо».',q:'«Что он сделал за последний месяц, а не пообещал?»',qs:'Запишите три факта. Не чувства, а поступки.',h3:'Сохраните список',c:'Перечитайте его, когда снова захочется поверить, что все изменится само.',why:'Решения из надежды откладываются годами. Решения из фактов можно принимать по одному маленькому шагу.'},
+  good:'Видите, что вам плохо, и не обманываете себя',
+  safety:true}
+];
+/* Блок «Что дальше?»: что человек найдет в канале. */
+var CARDS = [
+ {ask:'Как выйти из своего сценария?',ico:'1',t:'Подкасты Лоры',i:'В закрытом канале',c:'Про то, почему мы выбираем не тех и как поступать по-другому.'},
+ {ask:'А можно разобрать мою ситуацию?',ico:'2',t:'Разбор вашего типа',i:'Голосом, на этой неделе',c:'Лора разбирает ситуации участниц канала. Вопрос можно прислать анонимно.'},
+ {ask:'Можно пройти это вместе с Лорой?',ico:'3',t:'Программа «На своих условиях»',i:'Старт 1 декабря',c:'4 недели с Лорой. Участницы канала первыми узнают условия.'}
+];
+var DISCLAIM = 'Это авторский рефлексивный тест без научной стандартизации. Он не является психологической, психотерапевтической или медицинской диагностикой и не заменяет консультацию психолога, психотерапевта или врача. Если вам сейчас тяжело или рядом с партнером небезопасно, обратитесь, пожалуйста, к специалисту очно.';
+var WORDS = ['слабо','умеренно','заметно','сильно'];
 
-var step = 0, answers = [];
-var $ = function (id) { return document.getElementById(id); };
+var tg = window.Telegram && Telegram.WebApp ? Telegram.WebApp : null;
+if (tg) { try { tg.ready(); tg.expand(); } catch (e) {} }
+var app = document.getElementById('app'), step = -1, ans = [], fork = null;
+var N = Q.length;
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
+function av(){return '<div class="av">'+(AV?'<img src="'+esc(AV)+'" alt="">':'Л')+'</div>';}
+function who(){return '<div class="who">'+av()+'<b>'+esc(NAME)+', психолог и сексолог</b></div>';}
+function say(t){return '<div class="say">'+av()+'<div class="bub"><b>'+esc(NAME)+'</b>'+esc(t)+'</div></div>';}
+function doc(k,t){return DOCS[k]?'<a href="'+esc(DOCS[k])+'" target="_blank" rel="noopener">'+t+'</a>':t;}
+function hasDocs(){return DOCS.policy||DOCS.consent||DOCS.mailing;}
+function level(v){return v<=3?0:v<=6?1:v<=9?2:3;}
+function lower(t){t=t.replace(/\.$/,'');return t.charAt(0).toLowerCase()+t.slice(1);}
 
-function show(id) {
-  ['intro', 'quiz', 'result'].forEach(function (s) { $(s).hidden = (s !== id); });
-  window.scrollTo(0, 0);
+function intro(){
+  app.innerHTML=who()+
+   '<div class="hero"><span class="badge">Тест · 2 минуты</span>'+
+   '<h1>Что мешает вам жить в отношениях на своих условиях?</h1>'+
+   '<p>Качели, растворение, молчание или надежда. Узнаете, какой сценарий у вас повторяется, и с какого шага его остановить.</p></div>'+
+   '<ul class="checks"><li><i class="ck"></i><span>Какой сценарий сейчас решает за вас?</span></li>'+
+   '<li><i class="ck"></i><span>Где повторяется ваш привычный круг?</span></li>'+
+   '<li><i class="ck"></i><span>Как я с этим работаю?</span></li>'+
+   '<li><i class="ck"></i><span>Что можно сделать уже сегодня вечером?</span></li></ul>'+
+   say('Почти каждая девушка, которая ко мне приходит, уже все про себя понимает. И все равно снова оказывается там же. Этот тест покажет, где именно у вас включается старый сценарий.')+
+   '<div class="chips"><span>психоанализ</span><span>сексология</span><span>отношения</span><span>самоценность</span></div>'+
+   '<p>Здесь шестнадцать утверждений. Отвечайте по тому, как бывает обычно, а не по тому, как хотелось бы.</p>'+
+   '<p>Хороших и плохих результатов нет. Результат помогает выбрать первый шаг, а не оценить вас.</p>'+
+   '<button class="btn" id="go" type="button">Начать</button>'+
+   (hasDocs()?'<div class="legal">Нажимая «Начать», вы соглашаетесь с '+doc('policy','Политикой обработки персональных данных')+' и даете '+doc('consent','согласие на их обработку')+'.</div>':'')+
+   '<div class="foot"><p>'+DISCLAIM+'</p></div>';
+  document.getElementById('go').onclick=function(){step=0;render();};
 }
-
-function renderQuestion() {
-  var cur = Q[step];
-  $('progress').textContent = 'Вопрос ' + (step + 1) + ' из ' + Q.length;
-  $('bar').style.width = Math.round(((step + 1) / Q.length) * 100) + '%';
-  $('question').textContent = cur.q;
-  var box = $('options');
-  box.innerHTML = '';
-  cur.o.forEach(function (pair) {
-    var b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'opt';
-    b.textContent = pair[0];
-    b.addEventListener('click', function () {
-      answers = answers.slice(0, step).concat([pair[1]]);
-      step += 1;
-      if (step < Q.length) { renderQuestion(); } else { renderResult(); }
-    });
-    box.appendChild(b);
+function question(){
+  var q=Q[step],h='<div class="bar"><i style="width:'+(step/(N+1)*100)+'%"></i></div>'+
+   '<div class="count">'+(step+1)+' из '+N+'</div>'+
+   (q.note?'<div class="note">'+esc(q.note)+'</div>':'')+
+   '<div class="stmt">'+esc(q.t)+'</div>';
+  SCALE.forEach(function(s){h+='<button type="button" class="opt'+(ans[step]===s[1]?' on':'')+'" data-v="'+s[1]+'">'+s[0]+'</button>';});
+  h+='<div class="re" id="re"></div>';
+  h+='<button type="button" class="back" id="back">Назад</button>';
+  app.innerHTML=h;
+  var locked=false;
+  [].forEach.call(app.querySelectorAll('.opt'),function(b){b.onclick=function(){
+    if(locked)return;locked=true;
+    var v=+b.getAttribute('data-v');ans[step]=v;
+    [].forEach.call(app.querySelectorAll('.opt'),function(x){x.className='opt';});b.className='opt on';
+    var show=q.re&&v>=2;
+    if(show)document.getElementById('re').textContent=q.re;
+    setTimeout(function(){step++;render();},show?1500:170);};});
+  document.getElementById('back').onclick=function(){step--;render();};
+}
+function forkScreen(){
+  var h='<div class="bar"><i style="width:'+(N/(N+1)*100)+'%"></i></div><div class="count">Последний вопрос</div>'+
+   '<div class="stmt" style="min-height:0;margin-bottom:8px">'+esc(FORK.q)+'</div>';
+  FORK.a.forEach(function(a,i){h+='<button type="button" class="opt'+(fork===i?' on':'')+'" data-i="'+i+'">'+a[0]+'</button>';});
+  h+='<button type="button" class="back" id="back">Назад</button>';
+  app.innerHTML=h;
+  [].forEach.call(app.querySelectorAll('.opt'),function(b){b.onclick=function(){
+    fork=+b.getAttribute('data-i');b.className='opt on';setTimeout(function(){step++;render();},170);};});
+  document.getElementById('back').onclick=function(){step--;render();};
+}
+function sums(){var s=[0,0,0,0];Q.forEach(function(q,i){s[q.s]+=ans[i]||0;});return s;}
+function winner(s){
+  var max=Math.max.apply(null,s),ties=[];
+  for(var k=0;k<4;k++)if(s[k]===max)ties.push(k);
+  if(ties.length>1&&ties.indexOf(3)>=0)return 3; /* при равенстве с «надеждой» показываем ее: там важнее безопасность */
+  var best=ties[0],bt=-1;
+  ties.forEach(function(k){var t=0;Q.forEach(function(q,i){if(q.s===k&&ans[i]===3)t++;});if(t>bt){bt=t;best=k;}});
+  return best;
+}
+function result(){
+  var s=sums(),w=winner(s),r=R[w];
+  var fk=FORK.a[fork][1];
+  var link=(USE_BOT_LINK&&BOT)?('https://t.me/'+BOT+'?start=res_'+r.k+'_'+fk):CHANNEL;
+  var h=who()+'<div class="hero"><span class="badge">Ваш сценарий: '+r.row.toLowerCase()+'</span><h1 class="res">'+esc(r.t)+'</h1></div>';
+  r.p.forEach(function(x){h+='<p>'+esc(x)+'</p>';});
+  h+='<div class="lead">'+esc(r.lead)+'</div>';
+  if(r.safety)h+='<div class="safety">Если рядом с ним вам страшно, есть угрозы, контроль или насилие, начните с безопасности. Обратитесь к специалисту очно или в кризисную службу вашего города.</div>';
+  h+='<h3>Где это видно сильнее всего?</h3><div class="sit"><b>'+SIT[fk][0]+'</b><span>'+SIT[fk][1]+'</span></div>';
+  h+='<h3>Что видно по вашим ответам?</h3>';
+  R.forEach(function(x,k){var l=level(s[k]),d='';for(var i=0;i<4;i++)d+='<i'+(i<=l?' class="f"':'')+'></i>';
+    h+='<div class="sc'+(k===w?' me':'')+'"><div class="n">'+x.row+'</div><div class="l"><div class="seg">'+d+'</div><div class="w">'+WORDS[l]+'</div></div></div>';});
+  h+=say(r.say);
+  var good=[];[0,1,2,3].sort(function(a,b){return s[a]-s[b];}).forEach(function(k){if(k!==w&&level(s[k])===0&&good.length<2)good.push(R[k].good);});
+  if(good.length){h+='<h3>Что у вас уже работает?</h3>';good.forEach(function(g){h+='<div class="pw"><i class="ck"></i><span>'+g+'</span></div>';});}
+  var said=[];
+  [3,2].forEach(function(v){Q.forEach(function(q,i){if(q.s===w&&ans[i]===v)said.push(q.t);});});
+  if(said.length>=2){
+    h+='<h3>Почему все повторяется?</h3><div class="said"><div class="hd">Вы сами отметили в тесте:</div>';
+    said.slice(0,3).forEach(function(t){h+='<div class="it"><i class="ck soft"></i><span>'+esc(lower(t))+'</span></div>';});
+    h+='</div><p>'+esc(r.out)+'</p>';
+  }
+  var lb=['Что происходит','Привычная мысль','Привычный ответ','Чем заканчивается'];
+  h+='<h3>Ваш привычный круг</h3><div class="loop">';
+  r.loop.forEach(function(x,i){h+='<div class="lp"><span>'+lb[i]+'</span><b>'+esc(x)+'</b></div>'+(i<3?'<div class="ar" aria-hidden="true">↓</div>':'');});
+  h+='</div><div class="phr"><b>Новый ответ</b><span>'+esc(r.nw)+'</span></div>'+
+     '<p style="font-size:15px;color:var(--muted)">Вы можете менять свое участие в ситуации. Решения другого человека остаются за ним, и по ним вы видите, что делать дальше.</p>';
+  h+='<h3>Как я с этим работаю?</h3>';
+  r.tools.forEach(function(t){h+='<div class="tool"><span class="tg">'+t[0]+'</span><div>'+esc(t[1])+'</div></div>';});
+  var st=r.st;
+  h+='<h3>Что можно сделать уже сегодня вечером?</h3><div class="sub">'+esc(st.sub)+'</div>'+
+     '<div class="stp"><div class="no">1</div><div class="bd"><b>Поймайте момент</b><span>'+esc(st.a)+'</span></div></div>'+
+     '<div class="stp"><div class="no">2</div><div class="bd"><b>Спросите себя</b></div></div>'+
+     '<div class="phr"><b>'+esc(st.q)+'</b><span>'+esc(st.qs)+'</span></div>'+
+     '<div class="stp"><div class="no">3</div><div class="bd"><b>'+esc(st.h3)+'</b><span>'+esc(st.c)+'</span></div></div>'+
+     '<h4>Почему это работает?</h4>'+say(st.why);
+  var cards='',tot='';
+  CARDS.forEach(function(c){
+    cards+='<div class="ask"><span>'+esc(c.ask)+'</span></div>'+
+      '<div class="card"><div class="top"><div class="ico">'+esc(c.ico)+'</div><div class="ti"><b>'+esc(c.t)+'</b><i>'+esc(c.i)+'</i></div></div><div class="cap">'+esc(c.c)+'</div></div>';
+    tot+='<div class="pw"><i class="ck"></i><span>'+esc(c.t)+'</span></div>';
   });
-  show('quiz');
+  var cta='Перейти в закрытый канал';
+  h+='<h3>Что дальше?</h3><div class="lines"><p>Вы увидели свой сценарий и свой привычный круг.</p><p>Дальше обычно остается несколько вопросов.</p><p>На каждый у меня есть ответ.</p></div>'+
+     cards+'<div class="all">Все это ждет вас в закрытом канале.</div>'+
+     '<a class="btn" id="get" href="'+esc(link)+'">'+cta+' →</a>'+
+     '<div class="small">Бесплатно. Откроется телеграм.</div>'+
+     '<div class="total"><b>Что вы найдете в канале</b>'+tot+'</div>'+
+     '<a class="btn" id="get2" href="'+esc(link)+'">'+cta+' →</a>'+
+     (DOCS.mailing?'<div class="legal">Нажимая кнопку, вы переходите в телеграм и даете '+doc('mailing','согласие на получение сообщений')+'. Отписаться можно в любой момент.</div>':'')+
+     '<p style="text-align:center;font-weight:600;margin-top:22px">А сегодня выберите один поступок, после которого сможете сказать: «В этот раз я выбрала себя».</p>'+
+     '<button type="button" class="btn ghost" id="again">Пройти заново</button>'+
+     '<div class="foot"><p>'+DISCLAIM+'</p>'+(hasDocs()?'<p>'+doc('policy','Политика обработки персональных данных')+' · '+doc('consent','Согласие на обработку персональных данных')+' · '+doc('mailing','Согласие на рассылку')+'</p>':'')+'<p>© '+esc(NAME)+' Константиниди</p></div>';
+  app.innerHTML=h;
+  ['get','get2'].forEach(function(id){document.getElementById(id).onclick=function(e){
+    if(tg&&tg.openTelegramLink&&link.indexOf('https://t.me/')===0){e.preventDefault();try{tg.openTelegramLink(link);}catch(x){location.href=link;}}};});
+  document.getElementById('again').onclick=function(){step=-1;ans=[];fork=null;render();};
 }
-
-function renderResult() {
-  var score = { A: 0, B: 0, C: 0, D: 0 };
-  answers.forEach(function (k, i) { score[k] += (i === 0 ? 2 : 1); });
-  var key = answers[0] || 'A';
-  ['A', 'B', 'C', 'D'].forEach(function (k) { if (score[k] > score[key]) key = k; });
-  var r = R[key];
-  $('r-title').textContent = r.title;
-  $('r-text').textContent = r.text;
-  $('r-today').textContent = r.today;
-  $('r-safety').hidden = !r.safety;
-  var ch = $('channel');
-  ch.href = CHANNEL_URL;
-  ch.dataset.result = key;
-  show('result');
+function render(){
+  if(step<0)intro();else if(step<N)question();else if(step===N)forkScreen();else result();
+  window.scrollTo(0,0);
 }
-
-$('start').addEventListener('click', function () { step = 0; answers = []; renderQuestion(); });
-$('back').addEventListener('click', function () {
-  if (step === 0) { show('intro'); } else { step -= 1; renderQuestion(); }
-});
-$('restart').addEventListener('click', function () { step = 0; answers = []; show('intro'); });
+render();
 </script>
 </body>
 </html>
