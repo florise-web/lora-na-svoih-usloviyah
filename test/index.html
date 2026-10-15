@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Что мешает вам жить в отношениях на своих условиях?</title>
+<meta name="description" content="Тест от психолога и сексолога Лоры. 7 вопросов, 2 минуты.">
+<meta property="og:title" content="Что мешает вам жить в отношениях на своих условиях?">
+<meta property="og:description" content="7 вопросов, 2 минуты. Тест от Лоры.">
+<meta name="theme-color" content="#6E1631">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap">
+<style>
+:root{--ground:#F4F0F1;--ink:#1C1619;--wine:#6E1631;--rose:#EBD3D8;--muted:#5E5258;--paper:#FFFFFF;--on-wine:#FFF4F6}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--ground);color:var(--ink);font-family:'Golos Text',system-ui,sans-serif;-webkit-font-smoothing:antialiased;display:flex;justify-content:center}
+.app{width:100%;max-width:440px;min-height:100%;padding:calc(36px + env(safe-area-inset-top,0px)) max(20px,env(safe-area-inset-right,0px)) calc(28px + env(safe-area-inset-bottom,0px)) max(20px,env(safe-area-inset-left,0px));display:flex;flex-direction:column}
+.screen{display:flex;flex-direction:column;gap:20px;flex:1}
+.screen[hidden]{display:none}
+.eyebrow{font-size:14px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--wine)}
+h1{margin:0;font-family:'Unbounded','Golos Text',sans-serif;font-weight:700;font-size:28px;line-height:1.14;text-wrap:balance}
+h2{margin:0;font-family:'Unbounded','Golos Text',sans-serif;font-weight:500;font-size:22px;line-height:1.25;text-wrap:balance}
+p{margin:0;font-size:17px;line-height:1.5}
+.muted{color:var(--muted)}
+.photo{flex:1;min-height:200px;border-radius:24px;background:var(--rose);display:flex;align-items:flex-end;padding:18px;font-size:15px;font-weight:600;color:var(--wine)}
+.btn{display:block;width:100%;padding:18px;border:0;border-radius:14px;background:var(--wine);color:var(--on-wine);font:inherit;font-size:18px;font-weight:600;text-align:center;text-decoration:none;cursor:pointer}
+.btn:hover{background:#5A1128;color:var(--on-wine)}
+.top{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:var(--muted)}
+.link{border:0;background:none;padding:6px 0;font:inherit;font-size:14px;color:var(--wine);cursor:pointer}
+.bar{height:6px;border-radius:999px;background:#E2D6DA;overflow:hidden}
+.bar span{display:block;height:100%;background:var(--wine);border-radius:999px;transition:width .25s ease}
+.options{display:flex;flex-direction:column;gap:10px}
+.opt{text-align:left;padding:16px 18px;border:1.5px solid var(--ink);border-radius:14px;background:var(--paper);color:var(--ink);font:inherit;font-size:16px;line-height:1.4;cursor:pointer}
+.opt:hover{background:var(--rose)}
+.card{padding:16px 18px;border-radius:16px;background:var(--paper);display:flex;flex-direction:column;gap:6px}
+.card b{font-size:14px;color:var(--wine)}
+.cta{padding:18px;border-radius:18px;background:var(--wine);color:var(--on-wine);display:flex;flex-direction:column;gap:12px}
+.cta a{display:block;text-align:center;padding:14px;border-radius:12px;background:var(--on-wine);color:var(--wine);text-decoration:none;font-weight:600}
+.small{font-size:14px;line-height:1.45;color:var(--muted)}
+.spacer{flex:1}
+button:focus-visible,a:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.bar span{transition:none}}
+</style>
+</head>
+<body>
+<main class="app">
+
+<section class="screen" id="intro">
+<div class="eyebrow">Тест от Лоры</div>
+<h1>Что мешает вам жить в отношениях на своих условиях?</h1>
+<p class="muted">7 вопросов, 2 минуты. В конце поймете, какой сценарий у вас повторяется, и получите один шаг, который можно сделать уже сегодня.</p>
+<div class="photo">[Фото Лоры]</div>
+<button class="btn" id="start" type="button">Пройти тест</button>
+</section>
+
+<section class="screen" id="quiz" hidden>
+<div style="display:flex;flex-direction:column;gap:10px">
+<div class="top"><span id="progress">Вопрос 1 из 7</span><button class="link" id="back" type="button">Назад</button></div>
+<div class="bar"><span id="bar" style="width:14%"></span></div>
+</div>
+<h2 id="question"></h2>
+<div class="options" id="options"></div>
+</section>
+
+<section class="screen" id="result" hidden>
+<div class="eyebrow">Ваш результат</div>
+<h1 id="r-title"></h1>
+<p id="r-text"></p>
+<div class="card"><b>Шаг на сегодня</b><span id="r-today"></span></div>
+<p class="small" id="r-safety" hidden>Если рядом с ним вам страшно, начните с безопасности. Напишите нам, подскажем, куда обратиться.</p>
+<div class="spacer"></div>
+<div class="cta">
+<span>В закрытом канале Лора на этой неделе разбирает именно вашу ситуацию</span>
+<a id="channel" href="#" target="_blank" rel="noopener">Перейти в канал</a>
+</div>
+<button class="link" id="restart" type="button" style="align-self:center">Пройти заново</button>
+</section>
+
+</main>
+<script>
+// Ссылка на канал прогрева: вставить сюда
+var CHANNEL_URL = '#';
+
+var Q = [
+  { q: 'Что у вас сейчас с отношениями?', o: [
+    ['Знакомлюсь, хожу на свидания', 'A'],
+    ['Отношения только начались', 'B'],
+    ['Давно в паре', 'C'],
+    ['Все сложно, но не ухожу', 'D'] ] },
+  { q: 'Он не пишет два дня. Что внутри?', o: [
+    ['Становится только интереснее, хочется добиться', 'A'],
+    ['Не могу ни на чем сосредоточиться, жду', 'B'],
+    ['Уже привыкла, он всегда так', 'C'],
+    ['Понимаю, что опять начинается, и все равно жду', 'D'] ] },
+  { q: 'Какой мужчина цепляет сильнее?', o: [
+    ['Тот, кого надо добиваться', 'A'],
+    ['Тот, с кем с первых дней как в кино', 'B'],
+    ['Уже не до «цепляет», хочется, чтобы просто слышал', 'C'],
+    ['Тот, с кем больно, но без него не могу', 'D'] ] },
+  { q: 'Вам хочется на выходных в ресторан, а он предлагает остаться дома. Что вы сделаете?', o: [
+    ['Соглашусь, чтобы не показаться требовательной', 'A'],
+    ['Отменю свои планы, главное быть с ним', 'B'],
+    ['Промолчу, все равно будет как он хочет', 'C'],
+    ['Поругаемся, а потом я извинюсь', 'D'] ] },
+  { q: 'Когда вы в последний раз говорили мужчине «нет»?', o: [
+    ['Тем, кто не интересен, легко. Тем, кто нравится, не могу', 'A'],
+    ['Не помню, с ним мне все «да»', 'B'],
+    ['Давно, проще сделать самой', 'C'],
+    ['Говорю, но потом сдаюсь', 'D'] ] },
+  { q: 'Что вы чаще чувствуете в отношениях?', o: [
+    ['Азарт, а потом пустоту', 'A'],
+    ['Тревогу, что он перестанет стараться', 'B'],
+    ['Усталость и скуку', 'C'],
+    ['Обиду и надежду одновременно', 'D'] ] },
+  { q: 'Чего бы вам хотелось через полгода?', o: [
+    ['Чтобы цеплял тот, кто выбирает меня', 'A'],
+    ['Остаться собой и не потерять его', 'B'],
+    ['Снова хотеть его и чувствовать, что меня слышат', 'C'],
+    ['Наконец решить и перестать возвращаться', 'D'] ] }
+];
+
+var R = {
+  A: { title: 'Вас цепляют те, кого надо добиваться',
+       text: 'Спокойный мужчина, который пишет «доброе утро», кажется пресным, а тот, кто отвечает раз в сутки, не выходит из головы. Дело не во вкусе. Голова привыкла считать тревогу любовью, и это можно перестроить.',
+       today: 'После следующего свидания запишите не «екнуло или нет», а как вам было рядом с ним: спокойно или тревожно.' },
+  B: { title: 'Вы растворяетесь во влюбленности',
+       text: 'Отношения только начались, а ваши планы, подруги и дела уже на паузе. Страшно, что он перестанет стараться, и вы стараетесь за двоих.',
+       today: 'Верните в эту неделю одно свое дело, которое отменили ради него, и не отменяйте его.' },
+  C: { title: 'Вы тянете отношения за двоих',
+       text: 'Вы давно вместе. Предлагаете, объясняете, напоминаете, а он молчит. Желания все меньше, и кажется, что так теперь будет всегда.',
+       today: 'Выберите одну вещь, о которой давно молчите, и скажите о ней одной фразой, без длинных объяснений.' },
+  D: { title: 'Вы все понимаете, но не уходите',
+       text: 'Вы видите, что вам плохо, уходили и возвращались. Держит надежда, что он изменится, и страх остаться одной. С вами все в порядке: одного понимания тут не хватает никому.',
+       today: 'Запишите в заметки три факта: за что вы уходили в последний раз. Не чувства, а что он сделал.',
+       safety: true }
+};
+
+var step = 0, answers = [];
+var $ = function (id) { return document.getElementById(id); };
+
+function show(id) {
+  ['intro', 'quiz', 'result'].forEach(function (s) { $(s).hidden = (s !== id); });
+  window.scrollTo(0, 0);
+}
+
+function renderQuestion() {
+  var cur = Q[step];
+  $('progress').textContent = 'Вопрос ' + (step + 1) + ' из ' + Q.length;
+  $('bar').style.width = Math.round(((step + 1) / Q.length) * 100) + '%';
+  $('question').textContent = cur.q;
+  var box = $('options');
+  box.innerHTML = '';
+  cur.o.forEach(function (pair) {
+    var b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'opt';
+    b.textContent = pair[0];
+    b.addEventListener('click', function () {
+      answers = answers.slice(0, step).concat([pair[1]]);
+      step += 1;
+      if (step < Q.length) { renderQuestion(); } else { renderResult(); }
+    });
+    box.appendChild(b);
+  });
+  show('quiz');
+}
+
+function renderResult() {
+  var score = { A: 0, B: 0, C: 0, D: 0 };
+  answers.forEach(function (k, i) { score[k] += (i === 0 ? 2 : 1); });
+  var key = answers[0] || 'A';
+  ['A', 'B', 'C', 'D'].forEach(function (k) { if (score[k] > score[key]) key = k; });
+  var r = R[key];
+  $('r-title').textContent = r.title;
+  $('r-text').textContent = r.text;
+  $('r-today').textContent = r.today;
+  $('r-safety').hidden = !r.safety;
+  var ch = $('channel');
+  ch.href = CHANNEL_URL;
+  ch.dataset.result = key;
+  show('result');
+}
+
+$('start').addEventListener('click', function () { step = 0; answers = []; renderQuestion(); });
+$('back').addEventListener('click', function () {
+  if (step === 0) { show('intro'); } else { step -= 1; renderQuestion(); }
+});
+$('restart').addEventListener('click', function () { step = 0; answers = []; show('intro'); });
+</script>
+</body>
+</html>
