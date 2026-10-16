@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#6E1631">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap">
 <style>
 :root{--bg:#F4F0F1;--card:#fff;--wine:#6E1631;--wine2:#84203F;--deep:#4A0E21;--rose:#EBD3D8;--tint:#F7E9EC;--ink:#1C1619;--muted:#5E5258;--line:#E2D6DA;--on:#FFF4F6}
 *{box-sizing:border-box}
@@ -78,39 +78,44 @@ details p{padding:0 0 20px;color:var(--muted)}
 .vm .wv{flex:1;display:flex;align-items:center;gap:3px;height:30px}
 .vm .wv i{flex:1;max-width:4px;border-radius:2px;background:#C9879A}
 .av{background:#6E1631 url(img/lora-av.webp) center/cover;color:transparent}
-.hero{position:relative;background:linear-gradient(135deg,#8A1F3D,#5A1027);color:var(--on);overflow:hidden;padding:110px 24px 120px;min-height:660px;display:flex;align-items:center}
-.hero .hp{position:absolute;right:0;top:0;bottom:0;width:48%;background:url(img/lora.webp) center 20%/cover no-repeat}
-.hero .hp:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#6E1631 0%,rgba(110,22,49,.55) 16%,rgba(110,22,49,0) 42%)}
-.hero .hc{position:relative;width:100%}
-.hero .kick{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F0D9DF}
-.hero h1{font-size:clamp(48px,7.4vw,104px);line-height:.98;font-weight:700;color:#fff}
-.hero .sub{font-size:clamp(20px,2.2vw,26px);line-height:1.35;font-weight:500}
-.hero .box{padding:18px 22px;border-radius:18px;background:rgba(255,244,246,.12);font-size:18px;color:#F7E9EC}
-.hero .btn.light{box-shadow:0 12px 28px rgba(0,0,0,.25)}
-.hghost{display:inline-block;padding:18px 30px;border-radius:14px;border:1.5px solid rgba(255,244,246,.7);color:var(--on);text-decoration:none;font-weight:600;font-size:18px}
-.hghost:hover{background:rgba(255,244,246,.1);color:var(--on)}
-.hero .hchips{display:flex;flex-wrap:wrap;gap:8px}
-.hero .hchips span{padding:8px 14px;border-radius:999px;background:rgba(255,244,246,.14);font-size:14px;font-weight:600}
-.hero .hname{position:absolute;right:24px;bottom:24px;background:rgba(255,244,246,.92);color:var(--ink);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35}
+.hero{position:relative;background:#EDE7E9;color:var(--on);overflow:hidden;min-height:700px;display:flex;align-items:center;padding:90px 24px 130px}
+.hero .bgp{position:absolute;inset:0;background:linear-gradient(135deg,#A8284A,#7A1934);clip-path:polygon(0 0,84% 0,64% 100%,0 100%)}
+.hero .wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:90px;display:block;z-index:3}
+.hero .ph{position:absolute;right:2%;bottom:0;height:94%;max-width:62%;object-fit:contain;object-position:right bottom;z-index:2;filter:drop-shadow(0 20px 40px rgba(60,10,25,.18))}
+.hero .hc{position:relative;width:100%;z-index:4}
+.hero .kick{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#FBE7EC}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:400;text-transform:uppercase;font-size:clamp(46px,6.6vw,96px);line-height:.98;letter-spacing:.01em;color:#fff}
+.hero .sub{font-size:clamp(20px,2vw,25px);line-height:1.35;font-weight:500;color:#fff}
+.hero .box{padding:16px 20px;border-radius:14px;background:rgba(255,255,255,.16);font-size:17px;color:#FDF1F4}
+.hero .hbtn{display:inline-block;padding:20px 38px;border-radius:14px;background:#fff;color:#8A1F3D;text-decoration:none;font-weight:700;font-size:16px;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 14px 30px rgba(50,5,20,.25)}
+.hero .hbtn:hover{background:var(--on);color:var(--deep)}
+.hero .hchip{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.16);font-size:15px;font-weight:600;color:#fff}
+.hero .hchip:before{content:"";width:10px;height:10px;border-radius:50%;background:#F4C27A;box-shadow:0 0 0 3px rgba(244,194,122,.3)}
+.hero .htest{color:#fff;font-weight:600;font-size:16px;text-underline-offset:4px}
+.hero .hname{position:absolute;right:24px;bottom:56px;z-index:4;background:rgba(255,255,255,.94);color:var(--ink);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35}
 .hero .hname b{display:block;color:var(--wine)}
-@media (max-width:860px){.hero{flex-direction:column;padding:0 0 56px;min-height:0}.hero .hp{position:relative;width:100%;height:460px;flex:none;background-position:center 15%}.hero .hp:before{background:linear-gradient(0deg,#6E1631 0%,rgba(110,22,49,0) 45%)}.hero .hc{padding:0 16px;margin-top:-30px}.hero .hname{top:16px;bottom:auto;right:16px}.hghost{display:block;text-align:center}}
+@media (max-width:1100px){.hero .ph{max-width:44%;height:72%}.hero .hc .col{max-width:560px!important}}
+@media (max-width:860px){.hero{flex-direction:column;min-height:0;padding:0 0 70px;background:linear-gradient(160deg,#A8284A,#7A1934)}.hero .bgp{display:none}.hero .ph{position:relative;right:auto;height:auto;width:100%;max-width:none;max-height:430px;object-position:center bottom;margin-top:24px;filter:none}.hero .hc{padding:0 16px;margin-top:22px}.hero .hname{top:16px;bottom:auto;right:16px}.hero .hbtn{display:block;text-align:center}.hero .wave{height:44px}}
 @media (max-width:600px){.s{padding:60px 16px}.wk{padding:22px}.wk .num{font-size:80px}.btn{display:block}}
 </style>
 </head>
 <body>
 
 <section class="hero">
-<div class="hp"></div>
-<div class="w hc"><div class="col" style="max-width:620px">
-<div class="kick">Программа психолога и сексолога Лоры</div>
+<div class="bgp"></div>
+<img class="ph" id="lph" alt="Лора Константиниди, психолог и сексолог">
+<div class="w hc"><div class="col" style="max-width:640px;gap:24px">
+<div class="kick">4 недели с психологом и сексологом Лорой</div>
 <h1>На своих условиях</h1>
 <p class="sub">Для тех, кто снова влюбляется в того, кого надо добиваться, рядом с хорошим скучает или давно живет с мужчиной как соседи</p>
 <div class="box">Вы все про себя понимаете. Здесь вы начнете делать по-другому: по одному шагу в неделю, с Лорой рядом. Закончим до Нового года.</div>
-<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><a class="btn light" href="#tariffs">Забронировать место за 3 000 ₽</a><a class="hghost" href="test/">Пройти тест</a></div>
-<div class="hchips"><span>● Старт 1 декабря</span><span>4 недели</span><span>Онлайн</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:14px 18px;align-items:center"><a class="hbtn" href="#tariffs">Забронировать место</a><span class="hchip">Старт 1 декабря</span></div>
+<a class="htest" href="test/">Сначала пройти тест: какой сценарий в отношениях у вас</a>
 </div></div>
 <div class="hname"><b>Лора Константиниди</b>психолог и сексолог</div>
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 360 95, 900 -10, 1440 45 L1440 90 L0 90 Z" fill="#F4F0F1"/></svg>
 </section>
+<script>fetch("img/lora-cut.txt").then(function(r){return r.text()}).then(function(t){document.getElementById("lph").src="data:image/webp;base64,"+t.trim()})</script>
 
 <section class="s white">
 <div class="w col" style="gap:34px">
@@ -325,7 +330,7 @@ details p{padding:0 0 20px;color:var(--muted)}
 </div>
 </section>
 
-<footer style="background:#1C1619;border-top:1px solid #3A2E33;padding:clamp(48px,6vw,72px) 20px"><div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:32px 48px"><div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:'Unbounded',sans-serif;font-weight:700;font-size:20px;line-height:1.2;color:#EBD3D8">На своих условиях</span><span style="font-size:14px;color:#B8A9AF">© Лора Константиниди, 2026</span><span style="display:flex;flex-direction:column;gap:2px;font-size:13px;line-height:1.6;color:#8E7F86;padding-top:4px"><span>ИП Константиниди Лариса Марковна</span><span>ОГРНИП 319774600467530</span><span>ИНН 772169250138</span></span></div><nav style="display:flex;flex-direction:column;gap:12px"><a href="[поддержка]" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Поддержка в Telegram</a><a href="https://t.me/lori_talks" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Telegram-канал @lori_talks</a></nav><nav style="display:flex;flex-direction:column;gap:12px"><a href="[оферта]" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Публичная оферта</a><a href="[политика]" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Политика обработки персональных данных</a><a href="[согласие]" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Согласие на обработку персональных данных</a></nav></div></footer>
+<footer style="background:#1C1619;border-top:1px solid #3A2E33;padding:clamp(48px,6vw,72px) 20px"><div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:32px 48px"><div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:'Unbounded',sans-serif;font-weight:700;font-size:20px;line-height:1.2;color:#EBD3D8">На своих условиях</span><span style="font-size:14px;color:#B8A9AF">© Лора Константиниди, 2026</span><span style="display:flex;flex-direction:column;gap:2px;font-size:13px;line-height:1.6;color:#8E7F86;padding-top:4px"><span>ИП Константиниди Лариса Марковна</span><span>ОГРНИП 319774600467530</span><span>ИНН 772169250138</span></span></div><nav style="display:flex;flex-direction:column;gap:12px"><a href="[поддержка]" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Поддержка в Telegram</a><a href="https://t.me/lori_talks" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Telegram-канал @lori_talks</a></nav><nav style="display:flex;flex-direction:column;gap:12px"><a href="https://disk.yandex.ru/i/oPfxRMO2QCWA8g" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Публичная оферта</a><a href="https://disk.yandex.ru/d/r0pHDx2vnZbzvw" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Политика обработки персональных данных</a><a href="https://disk.yandex.ru/i/GyvXERreT7nK-Q" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Согласие на обработку персональных данных</a></nav></div></footer>
 
 </body>
 </html>
