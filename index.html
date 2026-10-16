@@ -78,25 +78,38 @@ details p{padding:0 0 20px;color:var(--muted)}
 .vm .wv{flex:1;display:flex;align-items:center;gap:3px;height:30px}
 .vm .wv i{flex:1;max-width:4px;border-radius:2px;background:#C9879A}
 .av{background:#6E1631 url(img/lora-av.webp) center/cover;color:transparent}
+.hero{position:relative;background:linear-gradient(135deg,#8A1F3D,#5A1027);color:var(--on);overflow:hidden;padding:110px 24px 120px;min-height:660px;display:flex;align-items:center}
+.hero .hp{position:absolute;right:0;top:0;bottom:0;width:48%;background:url(img/lora.webp) center 20%/cover no-repeat}
+.hero .hp:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#6E1631 0%,rgba(110,22,49,.55) 16%,rgba(110,22,49,0) 42%)}
+.hero .hc{position:relative;width:100%}
+.hero .kick{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#F0D9DF}
+.hero h1{font-size:clamp(48px,7.4vw,104px);line-height:.98;font-weight:700;color:#fff}
+.hero .sub{font-size:clamp(20px,2.2vw,26px);line-height:1.35;font-weight:500}
+.hero .box{padding:18px 22px;border-radius:18px;background:rgba(255,244,246,.12);font-size:18px;color:#F7E9EC}
+.hero .btn.light{box-shadow:0 12px 28px rgba(0,0,0,.25)}
+.hghost{display:inline-block;padding:18px 30px;border-radius:14px;border:1.5px solid rgba(255,244,246,.7);color:var(--on);text-decoration:none;font-weight:600;font-size:18px}
+.hghost:hover{background:rgba(255,244,246,.1);color:var(--on)}
+.hero .hchips{display:flex;flex-wrap:wrap;gap:8px}
+.hero .hchips span{padding:8px 14px;border-radius:999px;background:rgba(255,244,246,.14);font-size:14px;font-weight:600}
+.hero .hname{position:absolute;right:24px;bottom:24px;background:rgba(255,244,246,.92);color:var(--ink);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35}
+.hero .hname b{display:block;color:var(--wine)}
+@media (max-width:860px){.hero{flex-direction:column;padding:0 0 56px;min-height:0}.hero .hp{position:relative;width:100%;height:460px;flex:none;background-position:center 15%}.hero .hp:before{background:linear-gradient(0deg,#6E1631 0%,rgba(110,22,49,0) 45%)}.hero .hc{padding:0 16px;margin-top:-30px}.hero .hname{top:16px;bottom:auto;right:16px}.hghost{display:block;text-align:center}}
 @media (max-width:600px){.s{padding:60px 16px}.wk{padding:22px}.wk .num{font-size:80px}.btn{display:block}}
 </style>
 </head>
 <body>
 
-<section class="s" style="padding-top:48px">
-<div class="w" style="display:flex;flex-wrap:wrap;gap:40px;align-items:center">
-<div class="col" style="flex:999 1 540px;min-width:0">
-<div style="display:flex;flex-wrap:wrap;gap:8px"><span class="chip">Старт 1 декабря</span><span class="chip">4 недели</span><span class="chip">Онлайн</span></div>
-<div style="font-size:15px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--wine)">Программа психолога и сексолога Лоры</div>
-<h1 style="font-size:clamp(46px,7vw,92px);line-height:1;font-weight:700;color:var(--wine)">На своих условиях</h1>
-<p style="font-size:clamp(20px,2.2vw,26px);line-height:1.35;font-weight:500;max-width:640px">Для тех, кто снова влюбляется в того, кого надо добиваться, рядом с хорошим скучает или давно живет с мужчиной как соседи</p>
-<p class="lead" style="max-width:600px">Вы все про себя понимаете. Здесь вы начнете делать по-другому: по одному шагу в неделю, с Лорой рядом. Закончим до Нового года.</p>
-<div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn" href="#tariffs">Забронировать место за 3 000 ₽</a><a class="btn ghost" href="test/">Пройти тест</a></div>
-</div>
-<div style="flex:1 1 340px;min-width:0;aspect-ratio:4/5;border-radius:28px;background:#C9879A url(img/lora.webp) center/cover no-repeat;display:flex;align-items:flex-end;padding:24px">
-<div style="background:rgba(255,244,246,.92);border-radius:16px;padding:14px 18px;font-size:16px;line-height:1.4"><b style="color:var(--wine)">Лора Константиниди</b><br>Психолог и сексолог</div>
-</div>
-</div>
+<section class="hero">
+<div class="hp"></div>
+<div class="w hc"><div class="col" style="max-width:620px">
+<div class="kick">Программа психолога и сексолога Лоры</div>
+<h1>На своих условиях</h1>
+<p class="sub">Для тех, кто снова влюбляется в того, кого надо добиваться, рядом с хорошим скучает или давно живет с мужчиной как соседи</p>
+<div class="box">Вы все про себя понимаете. Здесь вы начнете делать по-другому: по одному шагу в неделю, с Лорой рядом. Закончим до Нового года.</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center"><a class="btn light" href="#tariffs">Забронировать место за 3 000 ₽</a><a class="hghost" href="test/">Пройти тест</a></div>
+<div class="hchips"><span>● Старт 1 декабря</span><span>4 недели</span><span>Онлайн</span></div>
+</div></div>
+<div class="hname"><b>Лора Константиниди</b>психолог и сексолог</div>
 </section>
 
 <section class="s white">
