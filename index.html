@@ -81,7 +81,8 @@ details p{padding:0 0 20px;color:var(--muted)}
 .hero{position:relative;background:#EDE7E9;color:var(--on);overflow:hidden;min-height:700px;display:flex;align-items:center;padding:90px 24px 130px}
 .hero .bgp{position:absolute;inset:0;background:linear-gradient(135deg,#A8284A,#7A1934);clip-path:polygon(0 0,84% 0,64% 100%,0 100%)}
 .hero .wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:90px;display:block;z-index:3}
-.hero .ph{position:absolute;right:2%;bottom:0;height:94%;max-width:62%;object-fit:contain;object-position:right bottom;z-index:2;filter:drop-shadow(0 20px 40px rgba(60,10,25,.18))}
+.hero .ph{position:absolute;right:calc(3% + 30px);bottom:0;height:92%;max-width:56%;object-fit:contain;object-position:center bottom;z-index:2;filter:drop-shadow(0 24px 40px rgba(60,10,25,.25))}
+.hero .arch{position:absolute;right:3%;bottom:0;width:min(520px,40%);height:84%;border-radius:999px 999px 0 0;background:radial-gradient(120% 90% at 50% 30%,#FBF5F6 0%,#F0E2E6 60%,#E3CCD3 100%);box-shadow:0 0 0 10px rgba(255,255,255,.18);z-index:1}
 .hero .hc{position:relative;width:100%;z-index:4}
 .hero .kick{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#FBE7EC}
 .hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:400;text-transform:uppercase;font-size:clamp(46px,6.6vw,96px);line-height:.98;letter-spacing:.01em;color:#fff}
@@ -94,8 +95,8 @@ details p{padding:0 0 20px;color:var(--muted)}
 .hero .htest{color:#fff;font-weight:600;font-size:16px;text-underline-offset:4px}
 .hero .hname{position:absolute;right:24px;bottom:56px;z-index:4;background:rgba(255,255,255,.94);color:var(--ink);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35}
 .hero .hname b{display:block;color:var(--wine)}
-@media (max-width:1100px){.hero .ph{max-width:44%;height:72%}.hero .hc .col{max-width:560px!important}}
-@media (max-width:860px){.hero{flex-direction:column;min-height:0;padding:0 0 70px;background:linear-gradient(160deg,#A8284A,#7A1934)}.hero .bgp{display:none}.hero .ph{position:relative;right:auto;height:auto;width:100%;max-width:none;max-height:430px;object-position:center bottom;margin-top:24px;filter:none}.hero .hc{padding:0 16px;margin-top:22px}.hero .hname{top:16px;bottom:auto;right:16px}.hero .hbtn{display:block;text-align:center}.hero .wave{height:44px}}
+@media (max-width:1100px){.hero .ph{max-width:44%;height:74%;right:calc(3% + 10px)}.hero .arch{width:40%;height:70%}.hero .hc .col{max-width:560px!important}}
+@media (max-width:860px){.hero{flex-direction:column;min-height:0;padding:0 0 70px;background:linear-gradient(160deg,#A8284A,#7A1934)}.hero .bgp{display:none}.hero .arch{right:50%;transform:translateX(50%);top:40px;bottom:auto;width:300px;height:420px;box-shadow:none}.hero .ph{position:relative;right:auto;height:auto;width:100%;max-width:none;max-height:430px;object-position:center bottom;margin-top:24px;filter:none}.hero .hc{padding:0 16px;margin-top:22px}.hero .hname{top:16px;bottom:auto;right:16px}.hero .hbtn{display:block;text-align:center}.hero .wave{height:44px}}
 @media (max-width:600px){.s{padding:60px 16px}.wk{padding:22px}.wk .num{font-size:80px}.btn{display:block}}
 </style>
 </head>
@@ -103,6 +104,7 @@ details p{padding:0 0 20px;color:var(--muted)}
 
 <section class="hero">
 <div class="bgp"></div>
+<div class="arch"></div>
 <img class="ph" id="lph" alt="Лора Константиниди, психолог и сексолог">
 <div class="w hc"><div class="col" style="max-width:640px;gap:24px">
 <div class="kick">4 недели с психологом и сексологом Лорой</div>
