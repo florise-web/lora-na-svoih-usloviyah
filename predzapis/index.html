@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>На своих условиях · предзапись на программу Лоры</title>
+<meta name="description" content="Программа психолога и сексолога Лоры для тех, кто снова выбирает не тех, растворяется в мужчине или живет с ним как соседи. 4 недели, старт 30 ноября.">
+<meta property="og:title" content="На своих условиях">
+<meta property="og:description" content="Онлайн-программа психолога и сексолога Лоры Константиниди. 4 недели, старт 30 ноября.">
+<meta name="theme-color" content="#6E1631">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap">
+<style>
+:root{--bg:#F4F0F1;--card:#fff;--wine:#6E1631;--wine2:#84203F;--deep:#4A0E21;--rose:#EBD3D8;--tint:#F7E9EC;--ink:#1C1619;--muted:#5E5258;--line:#E2D6DA;--on:#FFF4F6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 18px/1.55 'Golos Text',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--wine)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--wine);outline-offset:3px}
+h1,h2,h3{font-family:'Unbounded','Golos Text',sans-serif;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(28px,3.6vw,46px);line-height:1.1;font-weight:700}
+h2 em{font-style:normal;color:var(--wine)}
+p{margin:0}
+.s{padding:80px 24px}
+.w{max-width:1160px;margin:0 auto}
+.n{max-width:820px;margin:0 auto}
+.col{display:flex;flex-direction:column;gap:22px}
+.white{background:var(--card)}
+.dark{background:var(--ink);color:#F4F0F1}
+.wine{background:var(--wine);color:var(--on)}
+.pink{background:var(--rose)}
+.lead{font-size:20px;color:var(--muted)}
+.dark .lead{color:#D9C9CE}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:16px}
+.card{padding:26px;border-radius:20px;background:var(--card)}
+.btn{display:inline-block;padding:19px 34px;border-radius:14px;background:var(--wine);color:var(--on);text-decoration:none;font-weight:600;font-size:18px;text-align:center;box-shadow:0 10px 24px rgba(110,22,49,.22)}
+.btn:hover{background:var(--deep);color:var(--on)}
+.btn.light{background:var(--on);color:var(--wine);box-shadow:none}
+.btn.ghost{background:transparent;color:var(--wine);border:1.5px solid var(--wine);box-shadow:none}
+.chip{display:inline-block;padding:7px 14px;border-radius:999px;background:var(--tint);color:var(--wine);font-weight:600;font-size:14px}
+.q{font-size:19px;line-height:1.45}
+.bub{display:flex;gap:12px;align-items:flex-end}
+.av{flex:0 0 40px;width:40px;height:40px;border-radius:50%;background:var(--wine);color:var(--on);font:700 15px 'Unbounded',sans-serif;display:flex;align-items:center;justify-content:center}
+.bub div:last-child{background:var(--bg);border-radius:18px 18px 18px 4px;padding:14px 18px;font-size:17px}
+.bub b{display:block;font-size:14px;color:var(--wine)}
+.wk{border-radius:24px;background:var(--card);padding:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px 36px;position:relative;overflow:hidden}
+.wk .num{position:absolute;right:18px;top:-6px;font:700 110px/1 'Unbounded',sans-serif;color:var(--tint);pointer-events:none}
+.wk>*{position:relative}
+.wk h3{font-size:24px;line-height:1.2;margin-top:12px}
+.wk .ask{margin-top:16px;padding:16px 18px;border-radius:16px;background:var(--tint);font-size:17px;color:var(--deep)}
+.wk ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.wk li{display:flex;gap:10px;font-size:16px;line-height:1.45}
+.wk li b{flex:0 0 auto;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--wine);padding:3px 8px;border-radius:8px;background:var(--tint);height:fit-content;margin-top:1px}
+.tag{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--wine);color:var(--on);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.no{display:flex;flex-direction:column;gap:2px;padding:16px 0;border-bottom:1px solid var(--line)}
+.no:last-child{border-bottom:0}
+.no b{color:var(--wine)}
+.price{padding:22px;border-radius:18px;background:var(--wine);color:var(--on)}
+.price b{display:block;font:700 36px/1.1 'Unbounded',sans-serif}
+.tar{display:flex;flex-direction:column;gap:16px;padding:30px;border-radius:24px;background:var(--card)}
+.tar ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;flex:1}
+.tar li{display:flex;gap:10px;font-size:16.5px;line-height:1.45}
+.tar li:before{content:"✓";color:var(--wine);font-weight:700}
+.tar li.x{color:#9A8D93;text-decoration:line-through}
+.tar li.x:before{content:"✕";color:#9A8D93}
+.dk li:before{color:var(--rose)}
+details{border-radius:16px;background:var(--card);padding:0 22px}
+summary{list-style:none;cursor:pointer;padding:20px 0;font-weight:600;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";color:var(--wine);font-weight:700;font-size:22px;line-height:1}
+details[open] summary:after{content:"−"}
+details p{padding:0 0 20px;color:var(--muted)}
+.vm{padding:18px;border-radius:18px;background:var(--bg);max-width:520px}
+.vm .pl{display:flex;align-items:center;gap:12px;margin-top:8px}
+.vm .pb{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:var(--wine);position:relative}
+.vm .pb:after{content:"";position:absolute;left:17px;top:14px;border-left:13px solid var(--on);border-top:8px solid transparent;border-bottom:8px solid transparent}
+.vm .wv{flex:1;display:flex;align-items:center;gap:3px;height:30px}
+.vm .wv i{flex:1;max-width:4px;border-radius:2px;background:#C9879A}
+.av{background:#6E1631 url(../img/lora-av.webp) center/cover;color:transparent}
+.hero{position:relative;background:#EDE7E9;color:var(--on);overflow:hidden;min-height:700px;display:flex;align-items:center;padding:90px 24px 130px}
+.hero .bgp{position:absolute;inset:0;background:linear-gradient(135deg,#A8284A,#7A1934);clip-path:polygon(0 0,84% 0,64% 100%,0 100%)}
+.hero .wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:90px;display:block;z-index:3}
+.hero .ph{position:absolute;right:calc(3% + 30px);bottom:0;height:92%;max-width:56%;object-fit:contain;object-position:center bottom;z-index:2;filter:drop-shadow(0 24px 40px rgba(60,10,25,.25))}
+.hero .arch{position:absolute;right:3%;bottom:0;width:min(520px,40%);height:84%;border-radius:999px 999px 0 0;background:radial-gradient(120% 90% at 50% 30%,#FBF5F6 0%,#F0E2E6 60%,#E3CCD3 100%);box-shadow:0 0 0 10px rgba(255,255,255,.18);z-index:1}
+.hero .hc{position:relative;width:100%;z-index:4}
+.hero .kick{font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#FBE7EC}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-weight:400;text-transform:uppercase;font-size:clamp(46px,6.6vw,96px);line-height:.98;letter-spacing:.01em;color:#fff}
+.hero .sub{font-size:clamp(20px,2vw,25px);line-height:1.35;font-weight:500;color:#fff}
+.hero .box{padding:16px 20px;border-radius:14px;background:rgba(255,255,255,.16);font-size:17px;color:#FDF1F4}
+.hero .hbtn{display:inline-block;padding:20px 38px;border-radius:14px;background:#fff;color:#8A1F3D;text-decoration:none;font-weight:700;font-size:16px;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 14px 30px rgba(50,5,20,.25)}
+.hero .hbtn:hover{background:var(--on);color:var(--deep)}
+.hero .hchip{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:rgba(255,255,255,.16);font-size:15px;font-weight:600;color:#fff}
+.hero .hchip:before{content:"";width:10px;height:10px;border-radius:50%;background:#F4C27A;box-shadow:0 0 0 3px rgba(244,194,122,.3)}
+.hero .htest{color:#fff;font-weight:600;font-size:16px;text-underline-offset:4px}
+.hero .hname{position:absolute;right:24px;bottom:56px;z-index:4;background:rgba(255,255,255,.94);color:var(--ink);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35}
+.hero .hname b{display:block;color:var(--wine)}
+@media (max-width:1100px){.hero .ph{max-width:44%;height:74%;right:calc(3% + 10px)}.hero .arch{width:40%;height:70%}.hero .hc .col{max-width:560px!important}}
+@media (max-width:860px){.hero{flex-direction:column;min-height:0;padding:0 0 70px;background:linear-gradient(160deg,#A8284A,#7A1934)}.hero .bgp{display:none}.hero .arch{right:50%;transform:translateX(50%);top:40px;bottom:auto;width:300px;height:420px;box-shadow:none}.hero .ph{position:relative;right:auto;height:auto;width:100%;max-width:none;max-height:430px;object-position:center bottom;margin-top:24px;filter:none}.hero .hc{padding:0 16px;margin-top:22px}.hero .hname{top:16px;bottom:auto;right:16px}.hero .hbtn{display:block;text-align:center}.hero .wave{height:44px}}
+@media (max-width:600px){.s{padding:60px 16px}.wk{padding:22px}.wk .num{font-size:80px}.btn{display:block}}
+.czg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.cz{position:relative;display:flex;flex-direction:column;gap:16px;padding:30px 28px 28px;border-radius:26px;background:var(--card);box-shadow:0 14px 34px rgba(74,14,33,.07);overflow:hidden}.cz:before{content:"“";position:absolute;right:20px;top:-14px;font:700 120px/1 "Playfair Display",Georgia,serif;color:var(--tint);pointer-events:none}.cz h3{position:relative;margin:0;font:600 25px/1.2 "Playfair Display",Georgia,serif;color:var(--deep)}.czc{position:relative;align-self:flex-start;padding:7px 14px;border-radius:999px;background:var(--tint);color:var(--wine);font-weight:600;font-size:14px}.czb{padding:14px 16px;border-radius:16px;background:var(--bg)}.czb b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}.czb p{margin:0;font-size:16px;line-height:1.5}.czb.n{background:var(--tint)}.czb.n b{color:var(--wine)}.cz.f{background:var(--wine);color:var(--on)}.cz.f:before{color:rgba(255,244,246,.12)}.cz.f h3{color:var(--on)}.cz.f .czc{background:rgba(255,244,246,.16);color:var(--on)}.cz.f .czb{background:rgba(255,244,246,.09)}.cz.f .czb b{color:#E9BFCB}.cz.f .czb.n{background:var(--on);color:var(--ink)}.cz.f .czb.n b{color:var(--wine)}@media (max-width:980px){.czg{grid-template-columns:1fr 1fr}}@media (max-width:640px){.czg{grid-template-columns:1fr}.cz{padding:26px 22px}.cz h3{font-size:23px}}
+.wk .res{padding:12px 16px;border-radius:14px;border:1.5px dashed var(--wine);font-size:16px;line-height:1.45;color:var(--deep)}.wk .res b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--wine);margin-bottom:3px}
+</style>
+</head>
+<body>
+
+<section class="hero">
+<div class="bgp"></div>
+<div class="arch"></div>
+<img class="ph" id="lph" alt="Лора Константиниди, психолог и сексолог">
+<div class="w hc"><div class="col" style="max-width:640px;gap:24px">
+<div class="kick">Предзапись · онлайн-программа на 4 недели</div>
+<h1>На своих условиях</h1>
+<p class="sub">Для тех, кто снова влюбляется в того, кого надо добиваться, рядом с хорошим скучает или давно живет с мужчиной как соседи</p>
+<div class="box"><b style="display:block;font-size:19px;color:#fff;margin-bottom:6px">Из «почему он меня не выбирает» в «а он мне вообще подходит?»</b>За четыре недели попробуете вести себя по-новому в своих отношениях, по одному шагу в неделю, и Лора будет рядом, когда страшно.</div>
+<div style="display:flex;flex-wrap:wrap;gap:14px 18px;align-items:center"><a class="hbtn" href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener">Записаться в предзапись</a><span class="hchip">Предзапись открыта · старт 30 ноября</span></div>
+</div></div>
+<div class="hname"><b>Лора Константиниди</b>психолог и сексолог</div>
+<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 360 95, 900 -10, 1440 45 L1440 90 L0 90 Z" fill="#F4F0F1"/></svg>
+</section>
+<script>fetch("../img/lora-cut4.txt").then(function(r){return r.text()}).then(function(t){document.getElementById("lph").src="data:image/webp;base64,"+t.trim()})</script>
+
+<section class="s white">
+<div class="w col" style="gap:34px">
+<h2>Узнаете себя?</h2>
+<div class="grid">
+<div class="card q" style="background:var(--bg)">«Он пишет "доброе утро", и мне скучно. А тот, кто отвечает раз в сутки, не выходит из головы»</div>
+<div class="card q" style="background:var(--bg)">«Мы живем как соседи. Я предлагаю, напоминаю, решаю, а он молчит»</div>
+<div class="card q" style="background:var(--bg)">«Встречаемся месяц, а я уже бросила танцы и почти не вижу подруг»</div>
+<div class="card q" style="background:var(--bg)">«Пять лет только те, кто "не готов к серьезному". Год на одного, два на другого»</div>
+<div class="card q" style="background:var(--bg)">«С хорошим секса не хочется. А с тем, кто меня ни во что не ставил, хватало взгляда»</div>
+<div class="card q" style="background:var(--bg)">«Хочу на море, а не к его родителям на дачу. Но сказать не могу: вдруг подумает, что я меркантильная»</div>
+<div class="card q" style="background:var(--bg)">«Мужчины разные, а история каждый раз одна и та же. Общее у них только я»</div>
+<div class="card q" style="background:var(--wine);color:var(--on);font-weight:500">«Я все про себя понимаю. И все равно снова там же»</div>
+</div>
+</div>
+</section>
+
+<section class="s dark">
+<div class="n col">
+<h2 style="color:#F4F0F1">Понимать вы уже умеете</h2>
+<p class="lead">Книги, подкасты в машине, может, даже пара лет у психолога. Вы можете красиво объяснить, почему так выходит. А телефон все равно лежит экраном вверх, и вы ждете.</p>
+<p class="lead">Голова давно привыкла считать тревогу любовью, а спокойствие скукой, и книгой это не перепишешь. Меняется оно, когда вы раз за разом поступаете по-новому и видите, что ничего страшного не случилось.</p>
+<p style="font-size:22px;font-weight:600;color:#F4F0F1">Поэтому в программе каждую неделю одно задание из вашей настоящей жизни, слова, которыми его сказать, и разбор с Лорой, если что-то пошло не так.</p>
+</div>
+</section>
+
+<section class="s">
+<div class="w" style="display:flex;flex-wrap:wrap;gap:40px">
+<div class="col" style="flex:1 1 440px;min-width:0">
+<h2>Что уже пробовали</h2>
+<div style="display:flex;flex-direction:column">
+<div class="no"><b>Три недели игнора по методичке.</b><span>Даже если сработает, вы вернете то, от чего страдали.</span></div>
+<div class="no"><b>«Стань сильной и независимой».</b><span>Броня держится ровно до первого холодного мужчины.</span></div>
+<div class="no"><b>Марафон за 7 дней.</b><span>Неделя на подъеме, потом откат и вывод «это я не дожала».</span></div>
+<div class="no"><b>Курсы женственности.</b><span>Учат молчать и подстраиваться еще больше. А вы и так это умеете.</span></div>
+<div class="no"><b>«Будь стервой и бери с мужчины».</b><span>Та же игра по его правилам, только с другой стороны. Здесь вы учитесь понимать, подходит ли он вам, и уходить, если нет.</span></div>
+<div class="no"><b>«Да просто уйди от него».</b><span>Если бы было просто, вы бы уже ушли.</span></div>
+</div>
+</div>
+<div class="col card pink" style="flex:1 1 440px;min-width:0;padding:34px;border-radius:24px">
+<h2 style="font-size:clamp(26px,3vw,36px)">Как работает Лора</h2>
+<p>Сначала Лора помогает разобраться, откуда привычка заслуживать любовь удобством и почему тревога ощущается как влюбленность. Но одним пониманием дело не заканчивается: каждую неделю вы что-то меняете в жизни и приносите результат на разбор.</p>
+<p><b>Зачем тут сексолог?</b> Есть вопрос, который стыдно задать даже подруге: почему заводит тот, кто исчезает, а тот, кто рядом, не трогает. Вот это как раз к сексологу. Как вернуть желание туда, где спокойно, тоже.</p>
+<p style="color:var(--muted)">Эзотерики и советов «просто полюбите себя» здесь не будет.</p>
+</div>
+</div>
+</section>
+
+<section class="s white">
+<div class="w" style="display:flex;flex-wrap:wrap;gap:44px;align-items:center">
+<div style="flex:1 1 320px;min-width:0;aspect-ratio:1;border-radius:28px;background:#6E1631 center/cover no-repeat;display:flex;align-items:flex-end;padding:22px;color:var(--on);font-weight:600" id="lpara" role="img" aria-label="Лора с женихом"></div>
+<script>fetch("../img/para3.txt").then(function(r){return r.text()}).then(function(t){document.getElementById("lpara").style.backgroundImage="url(data:image/webp;base64,"+t.trim()+")"})</script>
+<div class="col" style="flex:999 1 480px;min-width:0">
+<span class="chip" style="align-self:flex-start">Почему Лора</span>
+<h2>Лора сама через это прошла</h2>
+<p>10 лет Лора прожила в отношениях, где ее не ценили. Уходила и возвращалась. Знала все про себя и все равно оставалась.</p>
+<p>Вышла через терапию. Потом был год без отношений и свиданий с собой. А потом мужчина, который за 4 дня собрал документы на визу и проехал 2 500 км, чтобы встретить с ней Новый год.</p>
+<div class="bub"><div class="av">Л</div><div><b>Лора</b>Спокойная любовь не обязана быть скучной. Я проверила на себе.</div></div>
+<p style="font-size:16px;color:var(--muted)">Клинический психолог, гештальт-терапевт и сексолог. МГППУ, New York Sexology Center, Московский институт сексологии, МГИ. Больше 1500 часов практики и 200 часов супервизий.</p>
+</div>
+</div>
+</section>
+
+<section class="s">
+<div class="w col" style="gap:30px">
+<h2>Программа под вашу ситуацию</h2>
+<p class="lead" style="max-width:700px">Созвоны общие, а шаг недели у каждой свой. Одиноким не придется слушать про быт, а тем, кто в паре, про свидания.</p>
+<div class="grid">
+<div class="card col" style="gap:12px"><span class="tag" style="align-self:flex-start">Вы одна</span><p class="q">Цепляют те, кого надо добиваться, а с теми, кто проявляет интерес, пусто.</p><p style="color:var(--muted)">Начнете замечать спокойных и с первых свиданий видеть по поступкам, серьезен ли мужчина.</p></div>
+<div class="card col" style="gap:12px"><span class="tag" style="align-self:flex-start">Только начали</span><p class="q">Страшно, что он перестанет стараться, а вы уже потихоньку теряете себя.</p><p style="color:var(--muted)">Останетесь собой и поймете, куда идут эти отношения.</p></div>
+<div class="card col" style="gap:12px"><span class="tag" style="align-self:flex-start">Давно в паре</span><p class="q">Живете как соседи, он не слышит, желания нет.</p><p style="color:var(--muted)">Скажете вслух то, что копится, и поймете, куда ушло желание.</p></div>
+</div>
+</div>
+</section>
+
+<section class="s pink" id="path">
+<div class="w col" style="gap:20px">
+<h2>Что будет по неделям</h2>
+<p class="lead" style="max-width:700px;color:var(--deep)">30 ноября откроется первый урок в записи. Дальше раз в неделю, по вторникам, живой созвон с Лорой примерно на час. Если не получится прийти, запись появится в канале в тот же вечер.</p>
+
+<div class="wk"><div class="num">01</div>
+<div><span class="tag">30 ноября · урок в записи</span><h3>Каких отношений я хочу и почему меня тянет не к тем</h3><div class="ask">«Почему спокойный кажется скучным, а тот, кто пропадает, не выходит из головы?»</div></div>
+<div class="col" style="gap:14px"><div class="bub"><div class="av">Л</div><div><b>Лора</b>Начнем с вас: найдем, по какому сценарию вы выбираете мужчин, и научимся отличать интерес от тревоги.</div></div>
+<ul><li><b>Одна</b>Записать, по каким поступкам вы поймете, что мужчина вам подходит. Сходить на свидание с таким</li><li><b>Начали</b>Сказать ему о своем желании, не угадывая реакцию</li><li><b>В паре</b>Сказать о желании, о котором давно молчите</li></ul><div class="res"><b>В конце недели у вас</b>Ваш сценарий выбора, записанный своими словами, и список поступков, по которым вы поймете, что мужчина ваш</div></div></div>
+
+<div class="wk"><div class="num">02</div>
+<div><span class="tag">8 декабря</span><h3>Как сказать «нет» и не бояться потерять мужчину</h3><div class="ask">«Почему я соглашаюсь, а потом злюсь на себя весь вечер?»</div></div>
+<div class="col" style="gap:14px"><div class="bub"><div class="av">Л</div><div><b>Лора</b>Разбираем, почему ваше «да» звучит раньше, чем вы успеваете спросить себя. И подбираем ваши слова для «нет».</div></div>
+<ul><li><b>Одна</b>Сразу отказать тому, кто не подходит, а не ждать, пока сам пропадет</li><li><b>Начали</b>Не отменять свое ради него</li><li><b>В паре</b>Одно «нет» там, где раньше соглашались</li></ul><div class="res"><b>В конце недели у вас</b>Готовые фразы для «нет» под ваши ситуации и первое «нет», уже сказанное вслух</div></div></div>
+
+<div class="wk"><div class="num">03</div>
+<div><span class="tag">15 декабря</span><h3>Желание: почему заводит холод и куда оно уходит в паре</h3><div class="ask">«Он внимательный и нежный, а я думаю про список покупок. Со мной что-то не так?»</div></div>
+<div class="col" style="gap:14px"><div class="bub"><div class="av">Л</div><div><b>Лора</b>Самая сексологическая неделя. Разберемся, почему страсть у вас идет в комплекте с тревогой и где брать желание в спокойных отношениях.</div></div>
+<ul><li><b>Одна</b>Сказать мужчине, в каком темпе вам комфортно идти к близости</li><li><b>Начали</b>Поговорить о близости: что нравится и в каком темпе</li><li><b>В паре</b>Поговорить о том, куда ушло желание</li></ul><div class="res"><b>В конце недели у вас</b>Состоявшийся разговор о близости и свой список: что вас правда заводит, а что просто тревожит</div></div></div>
+
+<div class="wk" style="background:var(--wine);color:var(--on)"><div class="num" style="color:rgba(255,244,246,.08)">+</div>
+<div><span class="tag" style="background:var(--on);color:var(--wine)">18 декабря · для всех участниц</span><h3 style="color:var(--on)">Если вы сейчас одна: где и как встретить своего</h3></div>
+<p style="color:#F0D9DF;align-self:center">Отдельный созвон для одиноких: где знакомиться, как выдержать первые свидания со спокойным мужчиной и не сбежать к тому, кто «интереснее».</p></div>
+
+<div class="wk"><div class="num">04</div>
+<div><span class="tag">22 декабря</span><h3>Мужчина, который вкладывается: деньги, забота, брак</h3><div class="ask">«Как сказать, что хочу замуж, и не спугнуть? И почему мне стыдно попросить о подарке?»</div></div>
+<div class="col" style="gap:14px"><div class="bub"><div class="av">Л</div><div><b>Лора</b>Учимся говорить вслух, чего хотите, и по поступкам понимать, серьезно ли он настроен.</div></div>
+<ul><li><b>Одна</b>Прямо сказать на свидании, каких отношений хотите, в том числе что хотите замуж</li><li><b>Начали</b>Спросить, куда идут ваши отношения</li><li><b>В паре</b>Поговорить о деньгах, его вкладе и будущем</li></ul><div class="res"><b>В конце недели у вас</b>Состоявшийся разговор о деньгах и будущем и ясный ответ, вкладывается ли он в вас</div></div></div>
+
+<div class="wk" style="background:var(--ink);color:#F4F0F1"><div class="num" style="color:rgba(255,255,255,.06)">✓</div>
+<div><span class="tag" style="background:var(--rose);color:var(--deep)">26 декабря</span><h3 style="color:#F4F0F1">Финальная встреча</h3></div>
+<p style="color:#D9C9CE;align-self:center">Посмотрим, что поменялось за месяц, и составим план на три месяца вперед.</p></div>
+</div>
+</section>
+
+<section class="s white">
+<div class="w" style="display:flex;flex-wrap:wrap;gap:44px;align-items:center">
+<div class="col" style="flex:1 1 440px;min-width:0">
+
+<h2>Вопросы не копятся до созвона</h2>
+<p class="lead">Сделали шаг недели, а внутри трясет? Он ответил не так, как вы ждали? Пишете в чат, и Лора отвечает. Можно под любым именем.</p>
+</div>
+<div class="col" style="flex:1 1 440px;min-width:0;gap:12px">
+<div style="align-self:flex-end;max-width:440px;background:var(--wine);color:var(--on);border-radius:18px 18px 4px 18px;padding:14px 18px;font-size:16.5px">Сказала ему, что хочу на море, а не на дачу. Он ответил «ну давай подумаем» и замолчал. Я опять все испортила?</div>
+<div class="vm"><b style="font-size:14px;color:var(--wine)">Лора</b><div class="pl"><div class="pb"></div><div class="wv"><i style="height:10px"></i><i style="height:18px"></i><i style="height:26px"></i><i style="height:14px"></i><i style="height:22px"></i><i style="height:28px"></i><i style="height:12px"></i><i style="height:20px"></i><i style="height:26px"></i><i style="height:10px"></i><i style="height:18px"></i><i style="height:24px"></i><i style="height:14px"></i><i style="height:22px"></i><i style="height:8px"></i><i style="height:18px"></i><i style="height:26px"></i><i style="height:12px"></i></div><b style="font-size:13px;color:var(--muted)">02:14</b></div>
+<p style="margin-top:10px;font-size:15px;color:var(--muted)">#неделя1 #желание #впаре</p></div>
+<p style="font-size:14px;color:var(--muted)">Пример, как может выглядеть ответ в чате</p>
+</div>
+</div>
+</section>
+
+<section class="s wine">
+<div class="w col" style="gap:30px">
+<h2 style="color:var(--on)">Что изменится за месяц</h2>
+<div class="grid">
+<div class="card" style="background:var(--wine2)"><b style="display:block;font:500 19px 'Unbounded',sans-serif;margin-bottom:8px">Если вы одна</b>Перестаете месяцами ждать тех, кто вас не выбирает. Видите по поступкам, серьезен ли мужчина, и начинаете замечать спокойных</div>
+<div class="card" style="background:var(--wine2)"><b style="display:block;font:500 19px 'Unbounded',sans-serif;margin-bottom:8px">Если только начали</b>Не растворяетесь в нем, у вас остаются свои дела и подруги, и вы понимаете, куда идут отношения</div>
+<div class="card" style="background:var(--wine2)"><b style="display:block;font:500 19px 'Unbounded',sans-serif;margin-bottom:8px">Если давно в паре</b>Говорите вслух то, о чем молчали, понимаете, куда ушло желание, и обсуждаете деньги и будущее</div>
+</div>
+<p style="font-size:clamp(20px,2.4vw,28px);line-height:1.35;max-width:860px;font-weight:500">А еще уходит постоянное напряжение, как будто вы все время ждете удара. Становится спокойно и, как ни странно, совсем не скучно.</p>
+</div>
+</section>
+
+<section class="s">
+<div class="w col" style="gap:30px">
+<div class="col" style="gap:12px"><h2>Истории из практики <em>Лоры</em></h2><p class="lead">Девушки из личной работы с Лорой. Слова в кавычках их собственные</p></div>
+<div class="czg">
+<article class="cz f"><span class="czc">Лиза, 30 · 2,5 месяца</span><h3>Обратно не вернулась</h3><div class="czb"><b>Было</b><p>Два года с женатым мужчиной, вечные расставания и возвращения. Жила с родителями, оргазмов не было, зарплата около 90 тысяч</p></div><div class="czb n"><b>Стало</b><p>После второго созвона ушла из этих отношений. Съехала в свою квартиру, слетала на Сейшелы, ходит на свидания. Зарплату подняли до 150 тысяч</p></div></article>
+<article class="cz"><span class="czc">3 сессии</span><h3>Он каждый день говорит, как ему повезло</h3><div class="czb"><b>Было</b><p>Он ее игнорировал и воспринимал как данность</p></div><div class="czb n"><b>Стало</b><p>Подарил колье, каждый день делает комплименты. А на работе ей еще и выписали премию</p></div></article>
+<article class="cz"><span class="czc">8 марта</span><h3>На Новый год было только шампанское</h3><div class="czb"><b>Было</b><p>На праздники без подарков. А 100 тысяч она зарабатывала за целый месяц</p></div><div class="czb n"><b>Стало</b><p>На 8 марта тюльпаны и поход в Victoria’s Secret: услышал ее «я оттуда хочу» и сам повез выбирать. Закрыла двух клиентов по 50 тысяч, свой прежний месячный доход, и говорит «я достойна»</p></div></article>
+<article class="cz"><span class="czc">2 года отношений</span><h3>Решилась уйти</h3><div class="czb"><b>Было</b><p>Два года рядом с мужчиной, где, по ее словам, «минусов гораздо больше»</p></div><div class="czb n"><b>Стало</b><p>Закончила эти отношения сама, хотя честно предупредила: «вероятно, я буду много плакать на твоих вопросах»</p></div></article>
+<article class="cz"><span class="czc">Катя</span><h3>Перестала обесценивать себя</h3><div class="czb"><b>Было</b><p>Обесценивала себя и свою работу</p></div><div class="czb n"><b>Стало</b><p>Крутые заказчики, свое жилье, путешествия, свобода. И влюбленные мужчины, которые ради встречи с ней готовы на безумства</p></div></article>
+<article class="cz"><span class="czc">Елизавета</span><h3>Выбирает себя</h3><div class="czb"><b>Было</b><p>Пришла с тремя целями: оргазмы, отношения мечты и самоценность, которую ничем не пошатнуть</p></div><div class="czb n"><b>Стало</b><p>После первого созвона «предвкушение и вдохновение». Теперь находит время на себя: массажи, красота, отдых</p></div></article>
+</div>
+</div>
+</section>
+
+<section class="s white" id="tariffs">
+<div class="w col" style="gap:30px">
+<div class="col" style="gap:10px"><h2>Как попасть в предзапись</h2><p class="lead" style="margin:0">Программа подходит и одиноким, и тем, кто в паре: шаг недели вы получаете под свою ситуацию. Предзапись ни к чему не обязывает</p></div>
+<div class="grid"><div class="card" style="background:var(--bg)"><span class="chip" style="background:var(--wine);color:var(--on)">1</span><p style="margin-top:12px"><b>Нажмите кнопку.</b> Откроется чат с Катей, менеджером поддержки. Сообщение уже готово, останется только отправить.</p></div><div class="card" style="background:var(--bg)"><span class="chip" style="background:var(--wine);color:var(--on)">2</span><p style="margin-top:12px"><b>Катя вас запишет.</b> Ответит на вопросы о программе и закрепит за вами место.</p></div><div class="card" style="background:var(--bg)"><span class="chip" style="background:var(--wine);color:var(--on)">3</span><p style="margin-top:12px"><b>Узнаете первой.</b> Катя расскажет об условиях участия и вариантах оплаты, в том числе частями.</p></div></div>
+<div><a class="btn" href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener">Записаться в предзапись</a></div>
+</div>
+</section>
+
+<section class="s">
+<div class="w" style="display:flex;flex-wrap:wrap;gap:44px">
+<div class="col" style="flex:1 1 440px;min-width:0">
+<h2>Что вы получите <em>еще до старта</em></h2>
+<div class="card"><b>Видео-приветствие от Лоры</b><p style="color:var(--muted);margin-top:4px">Как пройти месяц и не бросить на второй неделе</p></div>
+<div class="card"><b>Подкаст «Почему мы снова выбираем не тех»</b><p style="color:var(--muted);margin-top:4px">Можно слушать в машине по дороге на работу</p></div>
+<div class="card"><b>Анкета «Где я сейчас»</b><p style="color:var(--muted);margin-top:4px">В последний день вернем вам ваши ответы, и вы увидите разницу</p></div>
+<div class="card"><b>Практика «Согласилась, хотя не хотела»</b><p style="color:var(--muted);margin-top:4px">3 минуты вечером. К старту вы уже будете видеть свой сценарий</p></div>
+</div>
+<div class="col" style="flex:1 1 440px;min-width:0">
+<h2>Почему <em>не откладывать</em></h2>
+<div class="card"><b>Старт 30 ноября</b><p style="color:var(--muted);margin-top:4px">Последняя встреча 26 декабря, до праздников все успеете</p></div>
+<div class="card"><b>Вы уже платите за сценарий</b><p style="color:var(--muted);margin-top:4px">Вечерами в ожидании сообщения, разборами переписок с подругами, курсами, которые не сработали</p></div>
+<a class="btn" href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener">Записаться в предзапись</a>
+</div>
+</div>
+</section>
+
+<section class="s dark">
+<div class="n col">
+<h2 style="color:#F4F0F1">Кому программа не подойдет</h2>
+<p class="lead">Программа не заменяет психотерапию и лечение. Если в отношениях есть агрессия, угрозы или вам страшно рядом с партнером, начните с безопасности и личной помощи. Напишите нам, подскажем, куда обратиться, или предложим личную работу с Лорой.</p>
+</div>
+</section>
+
+<section class="s">
+<div class="n col" style="gap:12px">
+<h2 style="margin-bottom:14px">Остались вопросы?</h2>
+<details><summary>Сколько времени это займет?</summary><p>Созвон около часа в неделю и шаг недели, на него минут 15–20. Для сравнения: сколько сейчас уходит на ожидание ответа, разборы с подругами и прокрутку перед сном?</p></details>
+<details><summary>Я сейчас одна. Мне подойдет?</summary><p>Да. У одиноких свои шаги на каждую неделю, свой результат и отдельный созвон 18 декабря.</p></details>
+<details><summary>А если он не хочет ничего менять?</summary><p>Программа про вас. Вы меняете то, как ведете себя в отношениях, и по его реакции видите, что дальше.</p></details>
+<details><summary>Стыдно рассказывать о таком при других</summary><p>Говорить на созвоне не обязательно. В чате можно писать под любым именем. И очень быстро становится видно, что вы не одна такая.</p></details>
+<details><summary>Я уже ходила к психологу, и ничего</summary><p>Понимания у вас и так хватает. Здесь упор на действия: один шаг в неделю и разбор, что получилось.</p></details>
+<details><summary>А если опять не поможет?</summary><p>Первый разговор по-новому будет уже в первую неделю, так что вы быстро увидите, работает ли это у вас. Здесь пять живых встреч с Лорой, урок и задание на каждую неделю. Про стоимость и оплату частями расскажет Катя.</p></details>
+<details><summary>Боюсь, что куплю и не дойду до конца</summary><p>Программа короткая, всего 4 недели. В неделю один созвон и одно задание на 15–20 минут. Пропустили созвон, запись будет в канале в тот же вечер. Застряли с заданием, напишите в чат, и Лора ответит.</p></details>
+<details><summary>Что если пропущу созвон?</summary><p>Запись выходит в канал в тот же день, вопросы можно задать в чате.</p></details>
+<div class="card" style="margin-top:18px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between"><p style="margin:0;max-width:560px"><b>Не нашли свой вопрос?</b> Напишите Кате, менеджеру поддержки. Она подскажет по программе и запишет вас.</p><a class="btn" href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BF%D1%80%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener">Написать Кате в Telegram</a></div>
+</div>
+</section>
+
+<section class="s pink">
+<div class="n col" style="align-items:flex-start">
+<h2 style="color:var(--wine)">Начнем 30 ноября</h2>
+<p>Четыре недели, последняя встреча 26 декабря.</p>
+<a class="btn" href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener">Записаться в предзапись</a>
+<a href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BF%D1%80%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener" style="font-weight:600">Задать вопрос менеджеру поддержки Кате</a>
+<a href="../test/" style="font-weight:600">Не уверены, что это про вас? Пройдите тест: какой сценарий в отношениях у вас</a>
+</div>
+</section>
+
+<footer style="background:#1C1619;border-top:1px solid #3A2E33;padding:clamp(48px,6vw,72px) 20px"><div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:32px 48px"><div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:'Unbounded',sans-serif;font-weight:700;font-size:20px;line-height:1.2;color:#EBD3D8">На своих условиях</span><span style="font-size:14px;color:#B8A9AF">© Лора Константиниди, 2026</span><span style="display:flex;flex-direction:column;gap:2px;font-size:13px;line-height:1.6;color:#8E7F86;padding-top:4px"><span>ИП Константиниди Лариса Марковна</span><span>ОГРНИП 319774600467530</span><span>ИНН 772169250138</span></span></div><nav style="display:flex;flex-direction:column;gap:12px"><a href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BF%D1%80%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Менеджер поддержки Катя</a><a href="https://t.me/lori_talks" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Telegram-канал @lori_talks</a></nav><nav style="display:flex;flex-direction:column;gap:12px"><a href="https://disk.yandex.ru/i/oPfxRMO2QCWA8g" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Публичная оферта</a><a href="https://disk.yandex.ru/d/r0pHDx2vnZbzvw" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Политика обработки персональных данных</a><a href="https://disk.yandex.ru/i/GyvXERreT7nK-Q" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Согласие на обработку персональных данных</a></nav></div></footer>
+
+</body>
+</html>
