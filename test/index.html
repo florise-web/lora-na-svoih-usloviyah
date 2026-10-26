@@ -151,13 +151,15 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--wine);outline-offse
    BOT: имя бота без @. Кнопка результата ведет в бота с меткой вида
         res_a_odna (тип результата и ситуация). Бот ставит метку и
         присылает ссылку в закрытый канал.
-   USE_BOT_LINK = false или BOT пустой: кнопка ведет сразу на CHANNEL.
+   USE_BOT_LINK = false или BOT пустой: кнопка ведет в личку KATYA
+        с готовым сообщением, Катя бонусом дает доступ в CHANNEL.
    DOCS: ссылки на документы. Пустая строка прячет строку с документами. */
 var AV = '../img/lora-av.webp';
 var NAME = 'Лора';
 var BOT = '';
 var USE_BOT_LINK = true;
 var CHANNEL = 'https://t.me/+hj7zrEUyTApjYWNi';
+var KATYA = 'kateeesm';
 var DOCS = { policy: 'https://disk.yandex.ru/d/r0pHDx2vnZbzvw', consent: 'https://disk.yandex.ru/i/GyvXERreT7nK-Q', mailing: '' };
 /* ============================================= */
 
@@ -406,7 +408,7 @@ function winner(s){
 function result(){
   var s=sums(),w=winner(s),r=RR(w);
   var fk=FORK.a[fork][1];
-  var link=(USE_BOT_LINK&&BOT)?('https://t.me/'+BOT+'?start=res_'+r.k+'_'+fk):CHANNEL;
+  var link=(USE_BOT_LINK&&BOT)?('https://t.me/'+BOT+'?start=res_'+r.k+'_'+fk):('https://t.me/'+KATYA+'?text='+encodeURIComponent('Здравствуйте! Прошла тест у Лоры, мой сценарий «'+r.row+'». Хочу вторую часть разбора и доступ в закрытый канал'));
   var h=who()+'<div class="hero"><span class="badge">Ваш сценарий: '+r.row.toLowerCase()+'</span><h1 class="res">'+esc(r.t)+'</h1></div>';
   r.p.forEach(function(x){h+='<p>'+esc(x)+'</p>';});
   h+='<p style="font-weight:600">Если одно и то же повторяется снова и снова, это не невезение и не ваш характер, а схема. Ее можно заметить и поменять.</p>';
@@ -443,7 +445,7 @@ function result(){
      '<h4>Почему это работает?</h4>'+say(st.why);
   var tag='#'+r.row.toLowerCase()+' #'+SITCH[fk][0];
   var wv='';[8,14,22,12,26,18,10,24,16,28,12,20,9,22,14,26,10,18,24,12,16,8,20,14].forEach(function(x){wv+='<i style="height:'+x+'px"></i>';});
-  h+='<div class="inv"><h3>Это была первая часть</h3><p>Вы увидели свой сценарий и сделали первый шаг. Вторая часть разбора, где Лора объясняет, откуда это у вас и как выходить, лежит в закрытом канале.</p></div>';
+  h+='<div class="inv"><h3>Это была первая часть</h3><p>Вы увидели свой сценарий и сделали первый шаг. Вторая часть разбора, где Лора объясняет, откуда это у вас и как выходить, лежит в закрытом канале. Доступ туда бесплатный, его дает Катя, менеджер поддержки Лоры. Просто напишите ей.</p></div>';
   h+='<h3>Вторая часть вашего разбора</h3><div class="lock">';
   ex.lock.forEach(function(t,i){h+='<div class="ln"><i class="ck'+(i?' soft':'')+'"></i><span>'+esc(t)+'</span></div>';});
   h+='<div class="ov"><i class="lk"></i><span>Откроется в закрытом канале</span></div></div>';
@@ -458,19 +460,19 @@ function result(){
   h+='<h3>С чего начать в канале</h3>'+
      '<div class="stp"><div class="no">1</div><div class="bd"><b>Послушайте два подкаста Лоры</b><span>🎧 5 ошибок, из-за которых мы начинаем заслуживать любовь<br>🎧 5 признаков, что с ним все будет хорошо</span></div></div>'+
      '<div class="stp"><div class="no">2</div><div class="bd"><b>Задайте свой вопрос анонимно</b><span>Никто не узнает, что это вы. Лора выбирает вопросы участниц и отвечает на них голосом в канале</span></div></div>'+
-     '<div class="gl"><b>Канал закрытый</b><span>Вход только по ссылке из этого теста. В открытом канале этих разборов нет</span></div>';
-  h+='<a class="btn" id="get" href="'+esc(link)+'">Открыть вторую часть разбора →</a><div class="small">Бесплатно. Откроется телеграм.</div>';
+     '<div class="gl"><b>Как попасть в канал</b><span>Нажмите кнопку ниже, откроется чат с Катей, менеджером поддержки Лоры. Сообщение уже написано, просто отправьте. Катя пришлет доступ в канал в подарок</span></div>';
+  h+='<a class="btn" id="get" href="'+esc(link)+'">Написать Кате и забрать доступ →</a><div class="small">Бесплатно. Откроется чат с Катей в телеграме.</div>';
   h+='<h3>Остались вопросы?</h3>'+
-     '<details class="faq"><summary>Это бесплатно?</summary><p>Да. Канал бесплатный, вход по ссылке из теста.</p></details>'+
+     '<details class="faq"><summary>Это бесплатно?</summary><p>Да. Напишите Кате, менеджеру поддержки Лоры, и она бесплатно пришлет доступ в канал.</p></details>'+
      '<details class="faq"><summary>Мне будут что-то продавать?</summary><p>В конце ноября Лора расскажет о своей программе «На своих условиях». Участницы канала узнают первыми, а решать только вам. Все разборы в канале остаются бесплатными.</p></details>'+
      '<details class="faq"><summary>Можно задать свой вопрос?</summary><p>Да, и анонимно. Лора выбирает вопросы участниц и отвечает на них голосом в канале.</p></details>'+
      '<details class="faq"><summary>Я одна. Это для меня?</summary><p>Да. Разборы идут для всех трех ситуаций: одна, отношения только начались, давно в паре.</p></details>'+
      '<details class="faq"><summary>Можно выйти, если не подойдет?</summary><p>Конечно, в любой момент, как из любого канала.</p></details>';
-  h+='<a class="btn" id="get2" href="'+esc(link)+'">Перейти в закрытый канал →</a>'+
+  h+='<a class="btn" id="get2" href="'+esc(link)+'">Получить доступ у Кати →</a>'+
      (DOCS.mailing?'<div class="legal">Нажимая кнопку, вы переходите в телеграм и даете '+doc('mailing','согласие на получение сообщений')+'. Отписаться можно в любой момент.</div>':'')+
      '<button type="button" class="btn ghost" id="again">Пройти заново</button>'+
      '<div class="foot"><p>'+DISCLAIM+'</p>'+(hasDocs()?'<p>'+doc('policy','Политика обработки персональных данных')+' · '+doc('consent','Согласие на обработку персональных данных')+(DOCS.mailing?' · '+doc('mailing','Согласие на рассылку'):'')+'</p>':'')+'<p>ИП Константиниди Лариса Марковна, ОГРНИП 319774600467530, ИНН 772169250138</p></div>'+
-     '<div class="stick" id="stick"><a id="get3" href="'+esc(link)+'">Вторая часть разбора в канале →</a></div>';
+     '<div class="stick" id="stick"><a id="get3" href="'+esc(link)+'">Забрать вторую часть у Кати →</a></div>';
   app.innerHTML=h;
   ['get','get2','get3'].forEach(function(id){document.getElementById(id).onclick=function(e){
     if(tg&&tg.openTelegramLink&&link.indexOf('https://t.me/')===0){e.preventDefault();try{tg.openTelegramLink(link);}catch(x){location.href=link;}}};});
