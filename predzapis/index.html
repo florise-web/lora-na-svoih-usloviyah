@@ -100,6 +100,18 @@ details p{padding:0 0 20px;color:var(--muted)}
 @media (max-width:600px){.s{padding:60px 16px}.wk{padding:22px}.wk .num{font-size:80px}.btn{display:block}}
 .czg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.cz{position:relative;display:flex;flex-direction:column;gap:16px;padding:30px 28px 28px;border-radius:26px;background:var(--card);box-shadow:0 14px 34px rgba(74,14,33,.07);overflow:hidden}.cz:before{content:"“";position:absolute;right:20px;top:-14px;font:700 120px/1 "Playfair Display",Georgia,serif;color:var(--tint);pointer-events:none}.cz h3{position:relative;margin:0;font:600 25px/1.2 "Playfair Display",Georgia,serif;color:var(--deep)}.czc{position:relative;align-self:flex-start;padding:7px 14px;border-radius:999px;background:var(--tint);color:var(--wine);font-weight:600;font-size:14px}.czb{padding:14px 16px;border-radius:16px;background:var(--bg)}.czb b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}.czb p{margin:0;font-size:16px;line-height:1.5}.czb.n{background:var(--tint)}.czb.n b{color:var(--wine)}.cz.f{background:var(--wine);color:var(--on)}.cz.f:before{color:rgba(255,244,246,.12)}.cz.f h3{color:var(--on)}.cz.f .czc{background:rgba(255,244,246,.16);color:var(--on)}.cz.f .czb{background:rgba(255,244,246,.09)}.cz.f .czb b{color:#E9BFCB}.cz.f .czb.n{background:var(--on);color:var(--ink)}.cz.f .czb.n b{color:var(--wine)}@media (max-width:980px){.czg{grid-template-columns:1fr 1fr}}@media (max-width:640px){.czg{grid-template-columns:1fr}.cz{padding:26px 22px}.cz h3{font-size:23px}}
 .wk .res{padding:12px 16px;border-radius:14px;border:1.5px dashed var(--wine);font-size:16px;line-height:1.45;color:var(--deep)}.wk .res b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--wine);margin-bottom:3px}
+.pzf{display:flex;flex-direction:column;gap:18px;max-width:620px}
+.pzf label{display:flex;flex-direction:column;gap:8px;font-weight:600;font-size:16px}
+.pzf input[type=text],.pzf input:not([type]){font:inherit;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+.pzf input:focus{outline:3px solid var(--rose);border-color:var(--wine)}
+.pzf fieldset{border:0;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.pzf legend{font-weight:600;font-size:16px;margin-bottom:8px;padding:0}
+.pzf .pzr{flex-direction:row;align-items:center;gap:10px;font-weight:400;font-size:17px}
+.pzf .pzr input{width:20px;height:20px;accent-color:var(--wine);flex:none;margin:0}
+.pzf .pzs{font-size:15px;color:var(--muted)}
+.pzf .btn{border:0;cursor:pointer;font-family:inherit}
+.pzf input.bad{border-color:#C0392B}
+.pzmsg{font-size:16px;color:var(--wine)}
 </style>
 </head>
 <body>
@@ -113,7 +125,7 @@ details p{padding:0 0 20px;color:var(--muted)}
 <h1>На своих условиях</h1>
 <p class="sub">Для тех, кто снова влюбляется в того, кого надо добиваться, рядом с хорошим скучает или давно живет с мужчиной как соседи</p>
 <div class="box"><b style="display:block;font-size:19px;color:#fff;margin-bottom:6px">Из «почему он меня не выбирает» в «а он мне вообще подходит?»</b>За четыре недели попробуете вести себя по-новому в своих отношениях, по одному шагу в неделю, и Лора будет рядом, когда страшно.</div>
-<div style="display:flex;flex-wrap:wrap;gap:14px 18px;align-items:center"><a class="hbtn" href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener">Записаться в предзапись</a><span class="hchip">Предзапись открыта · старт 30 ноября</span></div>
+<div style="display:flex;flex-wrap:wrap;gap:14px 18px;align-items:center"><a class="hbtn" href="#tariffs">Записаться в предзапись</a><span class="hchip">Предзапись открыта · старт 30 ноября</span></div>
 </div></div>
 <div class="hname"><b>Лора Константиниди</b>психолог и сексолог</div>
 <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 C 360 95, 900 -10, 1440 45 L1440 90 L0 90 Z" fill="#F4F0F1"/></svg>
@@ -274,8 +286,19 @@ details p{padding:0 0 20px;color:var(--muted)}
 <section class="s white" id="tariffs">
 <div class="w col" style="gap:30px">
 <div class="col" style="gap:10px"><h2>Как попасть в предзапись</h2><p class="lead" style="margin:0">Программа подходит и одиноким, и тем, кто в паре: шаг недели вы получаете под свою ситуацию. Предзапись ни к чему не обязывает</p></div>
-<div class="grid"><div class="card" style="background:var(--bg)"><span class="chip" style="background:var(--wine);color:var(--on)">1</span><p style="margin-top:12px"><b>Выберите свою ситуацию.</b> Откроется чат с Катей, менеджером поддержки. Сообщение уже готово, останется только отправить.</p></div><div class="card" style="background:var(--bg)"><span class="chip" style="background:var(--wine);color:var(--on)">2</span><p style="margin-top:12px"><b>Катя вас запишет.</b> Ответит на вопросы о программе и закрепит за вами место.</p></div><div class="card" style="background:var(--bg)"><span class="chip" style="background:var(--wine);color:var(--on)">3</span><p style="margin-top:12px"><b>Узнаете условия первой.</b> Катя расскажет об условиях участия и оплате частями. Место и цену можно закрепить бронью, она засчитается в стоимость.</p></div></div>
-<div class="col" style="gap:12px"><b>Ваша ситуация сейчас:</b><div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn" href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB.%20%D0%AF%20%D1%81%D0%B5%D0%B9%D1%87%D0%B0%D1%81%20%D0%BE%D0%B4%D0%BD%D0%B0" target="_blank" rel="noopener">Я сейчас одна</a><a class="btn ghost" href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB.%20%D0%9C%D1%8B%20%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D0%B8%20%D0%B2%D1%81%D1%82%D1%80%D0%B5%D1%87%D0%B0%D1%82%D1%8C%D1%81%D1%8F" target="_blank" rel="noopener">Мы только начали</a><a class="btn ghost" href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB.%20%D0%9C%D1%8B%20%D0%B4%D0%B0%D0%B2%D0%BD%D0%BE%20%D0%B2%20%D0%BF%D0%B0%D1%80%D0%B5" target="_blank" rel="noopener">Давно в паре</a></div></div>
+<div class="grid"><div class="card" style="background:var(--bg)"><span class="chip" style="background:var(--wine);color:var(--on)">1</span><p style="margin-top:12px"><b>Оставьте имя и контакт.</b> Так место закрепится за вами, даже если сейчас не получится написать.</p></div><div class="card" style="background:var(--bg)"><span class="chip" style="background:var(--wine);color:var(--on)">2</span><p style="margin-top:12px"><b>Откроется чат с Катей.</b> Сообщение уже готово, останется только отправить. Катя ответит на вопросы о программе.</p></div><div class="card" style="background:var(--bg)"><span class="chip" style="background:var(--wine);color:var(--on)">3</span><p style="margin-top:12px"><b>Узнаете условия первой.</b> Катя расскажет об условиях участия и оплате частями. Место и цену можно закрепить бронью, она засчитается в стоимость.</p></div></div>
+<form id="pz" class="card pzf" style="background:var(--bg)" novalidate>
+<label>Как вас зовут<input name="name" required maxlength="60" autocomplete="given-name"></label>
+<label>Ник в Telegram или телефон<input name="contact" required maxlength="60" placeholder="@nik или +7 900 000-00-00"></label>
+<fieldset><legend>Ваша ситуация сейчас</legend>
+<label class="pzr"><input type="radio" name="situation" value="Я сейчас одна" required>Я сейчас одна</label>
+<label class="pzr"><input type="radio" name="situation" value="Мы только начали встречаться">Мы только начали встречаться</label>
+<label class="pzr"><input type="radio" name="situation" value="Мы давно в паре">Мы давно в паре</label>
+</fieldset>
+<label class="pzr pzs"><input type="checkbox" name="agree" required><span>Согласна на <a href="https://disk.yandex.ru/i/GyvXERreT7nK-Q" target="_blank" rel="noopener">обработку персональных данных</a></span></label>
+<button class="btn" type="submit">Записаться и написать Кате</button>
+<p class="pzmsg" role="status" hidden></p>
+</form>
 </div>
 </section>
 
@@ -294,7 +317,7 @@ details p{padding:0 0 20px;color:var(--muted)}
 <div class="card"><b>Старт 30 ноября</b><p style="color:var(--muted);margin-top:4px">Последняя встреча 26 декабря, до праздников все успеете</p></div>
 <div class="card"><b>Мест с личным сопровождением Лоры всего 10</b><p style="color:var(--muted);margin-top:4px">Лора ведет каждую сама, больше в декабре просто не успеет. В предзаписи вы узнаете об условиях первой</p></div>
 <div class="card"><b>Вы уже платите за сценарий</b><p style="color:var(--muted);margin-top:4px">Вечерами в ожидании сообщения, разборами переписок с подругами, курсами, которые не сработали</p></div>
-<a class="btn" href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener">Записаться в предзапись</a>
+<a class="btn" href="#tariffs">Записаться в предзапись</a>
 </div>
 </div>
 </section>
@@ -325,7 +348,7 @@ details p{padding:0 0 20px;color:var(--muted)}
 <div class="n col" style="align-items:flex-start">
 <h2 style="color:var(--wine)">Начнем 30 ноября</h2>
 <p>Четыре недели, последняя встреча 26 декабря.</p>
-<a class="btn" href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B2%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D1%8C%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener">Записаться в предзапись</a>
+<a class="btn" href="#tariffs">Записаться в предзапись</a>
 <a href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BF%D1%80%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener" style="font-weight:600">Задать вопрос менеджеру поддержки Кате</a>
 <a href="../test/" style="font-weight:600">Не уверены, что это про вас? Пройдите тест: какой сценарий в отношениях у вас</a>
 </div>
@@ -333,5 +356,29 @@ details p{padding:0 0 20px;color:var(--muted)}
 
 <footer style="background:#1C1619;border-top:1px solid #3A2E33;padding:clamp(48px,6vw,72px) 20px"><div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:32px 48px"><div style="display:flex;flex-direction:column;gap:12px"><span style="font-family:'Unbounded',sans-serif;font-weight:700;font-size:20px;line-height:1.2;color:#EBD3D8">На своих условиях</span><span style="font-size:14px;color:#B8A9AF">© Лора Константиниди, 2026</span><span style="display:flex;flex-direction:column;gap:2px;font-size:13px;line-height:1.6;color:#8E7F86;padding-top:4px"><span>ИП Константиниди Лариса Марковна</span><span>ОГРНИП 319774600467530</span><span>ИНН 772169250138</span></span></div><nav style="display:flex;flex-direction:column;gap:12px"><a href="https://t.me/kateeesm?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D1%80%D0%BE%D0%B1%D0%BD%D0%B5%D0%B5%20%D0%BF%D1%80%D0%BE%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83%20%C2%AB%D0%9D%D0%B0%20%D1%81%D0%B2%D0%BE%D0%B8%D1%85%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%D1%85%C2%BB" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Менеджер поддержки Катя</a><a href="https://t.me/lori_talks" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Telegram-канал @lori_talks</a></nav><nav style="display:flex;flex-direction:column;gap:12px"><a href="https://disk.yandex.ru/i/oPfxRMO2QCWA8g" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Публичная оферта</a><a href="https://disk.yandex.ru/d/r0pHDx2vnZbzvw" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Политика обработки персональных данных</a><a href="https://disk.yandex.ru/i/GyvXERreT7nK-Q" target="_blank" rel="noopener" style="color:#B8A9AF;text-decoration:none;font-size:14px;line-height:1.5">Согласие на обработку персональных данных</a></nav></div></footer>
 
+<script>
+(function(){
+// URL веб-приложения Google Apps Script (таблица «ЛОРА| Предзапись», лист «Заявки»).
+var ENDPOINT='https://script.google.com/macros/s/AKfycbwRVGjIxSaJDpbwEnmz3snYkbVeTJO2NMQm7Szq9L8K3uWtoE-tX9V05it3XDgFlq_V7g/exec';
+var KATYA='https://t.me/kateeesm';
+var q=new URLSearchParams(location.search);
+var map={ig:'Instagram',instagram:'Instagram',tg:'Telegram',telegram:'Telegram'};
+var raw=(q.get('s')||q.get('utm_source')||'').toLowerCase();
+var source=map[raw]||raw||(document.referrer?new URL(document.referrer).hostname:'прямой заход');
+var f=document.getElementById('pz'),msg=f.querySelector('.pzmsg');
+f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var name=f.name.value.trim(),contact=f.contact.value.trim(),sit=f.querySelector('input[name=situation]:checked');
+  f.name.classList.toggle('bad',!name);f.contact.classList.toggle('bad',!contact);
+  if(!name||!contact||!sit||!f.agree.checked){msg.hidden=false;msg.textContent='Заполните, пожалуйста, все поля и отметьте согласие';return}
+  var text='Здравствуйте! Меня зовут '+name+'. Хочу в предзапись на программу «На своих условиях». '+sit.value;
+  var tg=KATYA+'?text='+encodeURIComponent(text);
+  var btn=f.querySelector('button');btn.disabled=true;btn.textContent='Записываем…';
+  msg.hidden=false;msg.innerHTML='Вы в предзаписи. Если чат с Катей не открылся, <a href="'+tg+'">нажмите сюда</a>';
+  var sent=ENDPOINT?fetch(ENDPOINT,{method:'POST',mode:'no-cors',keepalive:true,body:new URLSearchParams({name:name,contact:contact,situation:sit.value,source:source})}).catch(function(){}):Promise.resolve();
+  Promise.race([sent,new Promise(function(r){setTimeout(r,2000)})]).then(function(){location.href=tg;btn.disabled=false;btn.textContent='Записаться и написать Кате'});
+});
+})();
+</script>
 </body>
 </html>
