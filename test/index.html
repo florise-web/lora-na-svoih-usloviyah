@@ -160,6 +160,10 @@ var BOT = '';
 var USE_BOT_LINK = true;
 var CHANNEL = 'https://t.me/+hj7zrEUyTApjYWNi';
 var KATYA = 'kateeesm';
+/* SHEET: адрес веб-приложения Google Таблицы «ЛОРА| Предзапись». Каждое прохождение
+   пишется строкой в лист «Тест», нажатие кнопки к Кате отмечается в той же строке.
+   Пусто: ничего не отправляется. Ссылки для соцсетей: ?s=ig (Instagram), ?s=tg (Telegram). */
+var SHEET = 'https://script.google.com/macros/s/AKfycbwRVGjIxSaJDpbwEnmz3snYkbVeTJO2NMQm7Szq9L8K3uWtoE-tX9V05it3XDgFlq_V7g/exec';
 var DOCS = { policy: 'https://disk.yandex.ru/d/r0pHDx2vnZbzvw', consent: 'https://disk.yandex.ru/i/GyvXERreT7nK-Q', mailing: '' };
 /* ============================================= */
 
@@ -336,6 +340,17 @@ var WORDS = ['слабо','умеренно','заметно','сильно'];
 var tg = window.Telegram && Telegram.WebApp ? Telegram.WebApp : null;
 if (tg) { try { tg.ready(); tg.expand(); } catch (e) {} }
 var app = document.getElementById('app'), step = -1, ans = [], fork = null;
+var SOURCE = (function(){
+  var q = new URLSearchParams(location.search), map = {ig:'Instagram',instagram:'Instagram',tg:'Telegram',telegram:'Telegram'};
+  var raw = (q.get('s') || q.get('utm_source') || '').toLowerCase();
+  if (map[raw] || raw) return map[raw] || raw;
+  if (tg && tg.initData) return 'Telegram';
+  var ref = ''; try { ref = document.referrer ? new URL(document.referrer).hostname : ''; } catch (e) {}
+  if (/instagram/.test(ref) || /Instagram/.test(navigator.userAgent)) return 'Instagram';
+  if (/(^|\.)(t\.me|telegram\.org)$/.test(ref)) return 'Telegram';
+  return ref || 'прямой заход';
+})();
+function send(d){ if (!SHEET) return; try { fetch(SHEET, {method:'POST', mode:'no-cors', keepalive:true, body:new URLSearchParams(d)}).catch(function(){}); } catch (e) {} }
 var N = Q.length;
 function QQ(){return fork!==null&&FORK.a[fork][1]==='odna'?QO:Q;}
 function RR(w){var r=R[w];if(fork===null||FORK.a[fork][1]!=='odna'||!RO[r.k])return r;var o={};for(var k in r)o[k]=r[k];var v=RO[r.k];for(k in v)o[k]=v[k];return o;}
@@ -474,7 +489,10 @@ function result(){
      '<div class="foot"><p>'+DISCLAIM+'</p>'+(hasDocs()?'<p>'+doc('policy','Политика обработки персональных данных')+' · '+doc('consent','Согласие на обработку персональных данных')+(DOCS.mailing?' · '+doc('mailing','Согласие на рассылку'):'')+'</p>':'')+'<p>ИП Константиниди Лариса Марковна, ОГРНИП 319774600467530, ИНН 772169250138</p></div>'+
      '<div class="stick" id="stick"><a id="get3" href="'+esc(link)+'">Забрать вторую часть у Кати →</a></div>';
   app.innerHTML=h;
+  var rid=Date.now().toString(36)+Math.random().toString(36).slice(2,6),clicked=false;
+  send({type:'test',id:rid,situation:SIT[fk][0],result:r.row,scores:R.map(function(x,k){return x.row+' '+s[k];}).join(', '),source:SOURCE});
   ['get','get2','get3'].forEach(function(id){document.getElementById(id).onclick=function(e){
+    if(!clicked){clicked=true;send({type:'test_click',id:rid});}
     if(tg&&tg.openTelegramLink&&link.indexOf('https://t.me/')===0){e.preventDefault();try{tg.openTelegramLink(link);}catch(x){location.href=link;}}};});
   document.getElementById('again').onclick=function(){step=-1;ans=[];fork=null;render();};
   var sk=document.getElementById('stick'),g1=document.getElementById('get'),g2=document.getElementById('get2');
